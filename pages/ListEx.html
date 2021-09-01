@@ -75,12 +75,34 @@
                 <div class="ui basic segment">
 
                     <h4 class="ui dividing header">
-                        <p class="extension-title">IsEven</p>
-                        <p class="title-description">Determines whether the given number is even.</p>
+                        <p class="extension-title">ToImmutableList</p>
+                        <p class="title-description">Changes a list from mutable (Changeable) to immutable(Not changeable).</p>
                         <pre>
-                        <code class="language-csharp">bool IsEven(this int source);</code><span class="example">Example:</span>
-                        <code class="language-csharp">bool result = 2.IsEven(); // true  
-bool result = 1.IsEven(); // false </code>
+                        <code class="language-csharp">IEnumerable<T> ToImmutableList<T>(this IEnumerable<T> sourceList);</code><span class="example">Example:</span>
+                        <code class="language-csharp">IList<int> list1 = new List<int>{2, 4, 6, 8};   
+IList<int> immutableList = list1.ToImmutableList(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ReplaceWith</p>
+                        <p class="title-description">Replaces a list items with another ones items.</p>
+                        <pre>
+                        <code class="language-csharp">IEnumerable<T> ReplaceWith<T>(this IList<T> sourceList, IEnumerable<T> targetList);</code><span class="example">Example:</span>
+                        <code class="language-csharp">IList<int> list1 = new List<int>{2, 4, 6, 8};   
+IList<int> list2 = new List<int>(); 
+list2.ReplaceWith(list1);
+</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">PickRandomItem</p>
+                        <p class="title-description">Picks one item through the list randomly..</p>
+                        <pre>
+                        <code class="language-csharp">T PickRandomItem<T>(this IList<T> sourceList);</code><span class="example">Example:</span>
+                        <code class="language-csharp">IList<int> list1 = new List<int>{2, 4, 6, 8};   
+int randomItem = list1.PickRandomItem(); </code>
                     </pre>
                     </h4>
 

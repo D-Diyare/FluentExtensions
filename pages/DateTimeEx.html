@@ -75,18 +75,296 @@
                 <div class="ui basic segment">
 
                     <h4 class="ui dividing header">
-                        <p class="extension-title">IsEven</p>
-                        <p class="title-description">Determines whether the given number is even.</p>
+                        <p class="extension-title">Tomorrow</p>
+                        <p class="title-description">Gets a day after given date.</p>
                         <pre>
-                        <code class="language-csharp">bool IsEven(this int source);</code><span class="example">Example:</span>
-                        <code class="language-csharp">bool result = 2.IsEven(); // true  
-bool result = 1.IsEven(); // false </code>
+                        <code class="language-csharp">DateTime Tomorrow(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.Tomorrow();  
+DateTime result = new DateTime(1943, 7, 23).Tomorrow(); </code>
                     </pre>
                     </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">Yesterday</p>
+                        <p class="title-description">Gets a day before given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime Yesterday(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.Yesterday();  
+DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
+                    </pre>
+                    </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">LastHour</p>
+                        <p class="title-description">Gets a day before given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime LastHour(this DateTime current)</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.LastHour();</code>
+                    </pre>
+                    </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">NextHour</p>
+                        <p class="title-description">Gets a day after given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime NextHour(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.NextHour();</code>
+                    </pre>
+                    </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">LastWeek</p>
+                        <p class="title-description">Gets a week before the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime LastWeek(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.LastWeek();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">NextWeek</p>
+                        <p class="title-description">Gets a week after the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime NextWeek(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.NextWeek();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">LastMonth</p>
+                        <p class="title-description">Gets a month before the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime LastMonth(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.LastMonth();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">NextMonth</p>
+                        <p class="title-description">Gets a month after the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime NextMonth(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.NextMonth();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">LastYear</p>
+                        <p class="title-description">Gets a year before the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime LastYear(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.LastYear();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">NextYear</p>
+                        <p class="title-description">Gets a year after the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime NextYear(this DateTime current);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.NextYear();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DaysAgo</p>
+                        <p class="title-description">Gets the number of days prior to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime DaysAgo(this DateTime source, int days);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.DaysAgo(5);  
+DateTime result = new DateTime(1943, 7, 23).DaysAgo(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DaysAfter</p>
+                        <p class="title-description">Gets the number of days after to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime DaysAgo(this DateTime source, int days);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.DaysAfter(5);  
+DateTime result = new DateTime(1943, 7, 23).DaysAfter(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">WeeksAgo</p>
+                        <p class="title-description">Gets the number of weeks prior to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime WeeksAgo(this DateTime source, int weeks);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.WeeksAgo(5);  
+DateTime result = new DateTime(1943, 7, 23).WeeksAgo(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">WeeksAfter</p>
+                        <p class="title-description">Gets the number of weeks after to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime WeeksAfter(this DateTime source, int weeks);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.WeeksAfter(5);  
+DateTime result = new DateTime(1943, 7, 23).WeeksAfter(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">MonthsAgo</p>
+                        <p class="title-description">Gets the number of months prior to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime MonthsAgo(this DateTime source, int months);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.MonthsAgo(5);  
+DateTime result = new DateTime(1943, 7, 23).MonthsAgo(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">MonthsAfter</p>
+                        <p class="title-description">Gets the number of months after to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime MonthsAfter(this DateTime source, int months);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.MonthsAfter(5);  
+DateTime result = new DateTime(1943, 7, 23).MonthsAfter(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">YearsAgo</p>
+                        <p class="title-description">Gets the number of years prior to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime YearsAgo(this DateTime source, int years);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.YearsAgo(5);  
+DateTime result = new DateTime(1943, 7, 23).YearsAgo(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">YearsAfter</p>
+                        <p class="title-description">Gets the number of years after to the given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime YearsAfter(this DateTime source, int years);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.YearsAfter(5);  
+DateTime result = new DateTime(1943, 7, 23).YearsAfter(13); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">FirstDayOfMonth</p>
+                        <p class="title-description">Gets the first day of month.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime FirstDayOfMonth(this DateTime date);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.FirstDayOfMonth();  
+DateTime result = new DateTime(1943, 7, 23).FirstDayOfMonth(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">LastDayOfMonth</p>
+                        <p class="title-description">Gets the last day of month.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime LastDayOfMonth(this DateTime date);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = DateTime.Now.LastDayOfMonth();  
+DateTime result = new DateTime(1943, 7, 23).LastDayOfMonth(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DaysLeft</p>
+                        <p class="title-description">Gets the number of days left to the target date.</p>
+                        <pre>
+                        <code class="language-csharp">double DaysLeft(this DateTime source, DateTime target);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 9, 20);  
+DateTime result = DateTime.Now.DaysLeft(date); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DaysInMonth</p>
+                        <p class="title-description">Gets the number of the days of the given date month.</p>
+                        <pre>
+                        <code class="language-csharp">int DaysInMonth(this DateTime date);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 9, 20);  
+int result = date.DaysInMonth(date); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsBetween</p>
+                        <p class="title-description">Determines whether the given date is between the two given dates.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsBetween(this DateTime dateToCompare, DateTime startDate, DateTime endDate);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 8, 20);  
+DateTime date2 = new DateTime(2021, 9, 20);
+bool result = DateTime.Now.IsBetween(date, date2); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsBefore</p>
+                        <p class="title-description">Determines whether the given date is before the target one.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsBefore(this DateTime dateToCompare, DateTime target);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 9, 20);  
+bool result = DateTime.Now.IsBefore(date); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsAfter</p>
+                        <p class="title-description">Determines whether the given date is after the target one.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsAfter(this DateTime dateToCompare, DateTime target);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 8, 20);  
+bool result = DateTime.Now.IsAfter(date); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsYearLeap</p>
+                        <p class="title-description">Determines whether the given year is a leap year.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsYearLeap(this DateTime year);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 8, 20);
+bool result = date.IsYearLeap(); // false</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">PreviousLeapYear</p>
+                        <p class="title-description">Gets the previous leap year based on the given year.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime PreviousLeapYear(this DateTime year);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 9, 20);
+DateTime result = date.PreviousLeapYear(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">NextLeapYear</p>
+                        <p class="title-description">Gets the next leap year based on the given year.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime NextLeapYear(this DateTime year);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(2021, 9, 20);
+DateTime result = date.NextLeapYear(); // 2024 </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">GetAge</p>
+                        <p class="title-description">Calculates age based on given date.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime GetAge(this DateTime year);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime date = new DateTime(1954, 9, 20);
+int result = date.GetAge(); // 67 (According to the current date "2021, September, 1")</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DayName</p>
+                        <p class="title-description">Gets the name of the given date time.</p>
+                        <pre>
+                        <code class="language-csharp">DateTime DayName(this DateTime year);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = DateTime.Now.DayName();  </code>
+                    </pre>
+                    </h4>
 
 
 

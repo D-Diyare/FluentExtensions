@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MtEjLOTgmKUbJPezkj24NAW35k4l2juEoJGamGbdzAu3DCtIPzixGP5ZuGazFfnCaDDPGxexXI/TI4mhgUdMSQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Douglas\\RiderProjects\\FluentExtensions\\src\\FluentExtensions\\FluentExtensions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Douglas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Douglas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

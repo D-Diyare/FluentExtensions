@@ -75,18 +75,227 @@
                 <div class="ui basic segment">
 
                     <h4 class="ui dividing header">
-                        <p class="extension-title">IsEven</p>
-                        <p class="title-description">Determines whether the given number is even.</p>
+                        <p class="extension-title">IsInt</p>
+                        <p class="title-description">Determines whether the given string is Integer.</p>
                         <pre>
-                        <code class="language-csharp">bool IsEven(this int source);</code><span class="example">Example:</span>
-                        <code class="language-csharp">bool result = 2.IsEven(); // true  
-bool result = 1.IsEven(); // false </code>
+                        <code class="language-csharp">bool IsInt(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "2".IsInt(); // true  
+bool result = "Hello".IsInt(); // false </code>
                     </pre>
                     </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsDouble</p>
+                        <p class="title-description">Determines whether the given string is Double.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsDouble(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "4.78".IsDouble(); // true  
+bool result = "Hello".IsDouble(); // false </code>
+                    </pre>
+                    </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsDecimal</p>
+                        <p class="title-description">Determines whether the given string is Decimal.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsDecimal(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "1.0M".IsDecimal(); // true  
+bool result = "Hello".IsDecimal(); // false </code>
+                    </pre>
+                    </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsDate</p>
+                        <p class="title-description">Determines whether the given string is Date.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsDate(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "01/09/2021".IsDate(); // true  
+bool result = "Hello".IsDate(); // false </code>
+                    </pre>
+                    </h4>
 
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsBoolean</p>
+                        <p class="title-description">Determines whether the given string is Boolean.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsBoolean(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "true".IsBoolean(); // true  
+bool result = "Hello".IsBoolean(); // false </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToBoolean</p>
+                        <p class="title-description">Converts string type (True | False) to boolean. </p>
+                        <pre>
+                        <code class="language-csharp">bool ToBoolean(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "True".ToBoolean(); // true  
+bool result = "false".ToBoolean(); // false </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">GetInBetween</p>
+                        <p class="title-description">Determines whether the given string is Date.</p>
+                        <p class="title-description">Credits: <a href="https://stackoverflow.com/a/28723216/12352466">https://stackoverflow.com/a/28723216/12352466</a></p>
+                        <pre>
+                        <code class="language-csharp">string GetInBetween(this string source, string start, string end);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string text = "This Is FluentExtensions";  
+string result = text.GetInBetween("This", "FluentExtensions"); // " Is " </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToTitleCase</p>
+                        <p class="title-description">Converts given text into title case text.</p>
+                        <pre>
+                        <code class="language-csharp">string ToTitleCase(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "net".ToTitleCase(); // Net  
+string result = "hello".ToTitleCase(); // Hello </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToTitleCase</p>
+                        <p class="title-description">Converts given text into title case text.</p>
+                        <pre>
+                        <code class="language-csharp">string ToTitleCase(this string source, CultureInfo culture);</code><span class="example">Example:</span>
+                        <code class="language-csharp">CultureInfo culture = new CultureInfo("en-US");  
+string result = "hello".ToTitleCase(culture); // Hello </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsContainDigits</p>
+                        <p class="title-description">Determines whether the given string contains digit(s).</p>
+                        <pre>
+                        <code class="language-csharp">bool IsContainDigits(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "212 Street".IsContainDigits(); // true  
+bool result = "hello".IsContainDigits(); // false </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsContainLetters</p>
+                        <p class="title-description">Determines whether the given string contains letter(s).</p>
+                        <pre>
+                        <code class="language-csharp">bool IsContainLetters(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "212 Street".IsContainLetters(); // true  
+bool result = "53".IsContainLetters(); // false </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">AreAllDigits</p>
+                        <p class="title-description">Determines whether all characters of the given text are digits.</p>
+                        <pre>
+                        <code class="language-csharp">bool AreAllDigits(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "212 Street".AreAllDigits(); // false  
+bool result = "53".AreAllDigits(); // true </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">AreAllLetters</p>
+                        <p class="title-description">Determines whether all characters of the given text are letters.</p>
+                        <pre>
+                        <code class="language-csharp">bool AreAllLetters(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "212 Street".AreAllLetters(); // false  
+bool result = "Hello".AreAllLetters(); // true </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">FromBase64ToByteArray</p>
+                        <p class="title-description">Converts back base64 string to byte array.</p>
+                        <pre>
+                        <code class="language-csharp">byte[] FromBase64ToByteArray(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">byte[] result = "SGVsbG8gRnJvbSBGbHVlbnRFeHRlbnNpb25z".FromBase64ToByteArray();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">GetBytes</p>
+                        <p class="title-description">Converts string to byte array.</p>
+                        <pre>
+                        <code class="language-csharp">byte[] GetBytes(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">byte[] result = "Hello World!".GetBytes();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">GetBytes</p>
+                        <p class="title-description">Converts string to byte array.</p>
+                        <pre>
+                        <code class="language-csharp">byte[] GetBytes(this string source, EncodingType encodingType);</code><span class="example">Example:</span>
+                        <code class="language-csharp">byte[] result = "Hello World!".GetBytes(EncodingType.Unicode);</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsEmpty</p>
+                        <p class="title-description">Determines whether the given text is null or whitespace or empty.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsEmpty(this string source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "Hello".IsEmpty(); // false  
+bool result = " ".IsEmpty(); // true 
+bool result = "".IsEmpty(); // true </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">GetFileExtension</p>
+                        <p class="title-description">Gets the extension of the file.</p>
+                        <pre>
+                        <code class="language-csharp">string GetFileExtension(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "C:\\file.txt".GetFileExtension();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">FileExists</p>
+                        <p class="title-description">Determines whether the file exists.</p>
+                        <pre>
+                        <code class="language-csharp">bool FileExists(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = "C:\\file.txt".FileExists(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToFileInDisk</p>
+                        <p class="title-description">Create a text file based on the given text.</p>
+                        <pre>
+                        <code class="language-csharp">void ToFileInDisk(this string source, string path);</code><span class="example">Example:</span>
+                        <code class="language-csharp">"Hello World!".ToFileInDisk("C:\\file.txt"); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToFileInDiskAsync</p>
+                        <p class="title-description">Create a text file asynchronously based on the given text.</p>
+                        <pre>
+                        <code class="language-csharp">Task ToFileInDiskAsync(this string source, string path);</code><span class="example">Example:</span>
+                        <code class="language-csharp">await "Hello World!".ToFileInDiskAsync("C:\\file.txt"); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ReadFromDisk</p>
+                        <p class="title-description">Gets the content of the text file.</p>
+                        <pre>
+                        <code class="language-csharp">string ReadFromDisk(this string path);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "C:\\file.txt".ReadFromDisk(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ReadFromDiskAsync</p>
+                        <p class="title-description">Gets the content of the text file asynchronously.</p>
+                        <pre>
+                        <code class="language-csharp">Task<string> ReadFromDiskAsync(this string path);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = await "C:\\file.txt".ReadFromDiskAsync(); </code>
+                    </pre>
+                    </h4>
 
 
 
