@@ -1,0 +1,70 @@
+.full.height>.toc {
+    position: fixed;
+    z-index: 1;
+    background-color: #563D7C;
+    width: 250px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.article {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 0px;
+    margin-left: 260px;
+}
+
+pre {
+    margin: 0;
+}
+
+pre code {
+    margin: 0 0 5px 0;
+    font-weight: 100;
+}
+
+.extension-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.ui.container {
+    height: 100vh;
+    margin: 20px 0 0 260px !important;
+}
+
+.ui.basic.segment {
+    margin: 0 !important;
+}
+
+.title-description {
+    font-size: 1rem;
+    color: gray;
+    font-style: italic;
+    font-weight: 200;
+    margin: 0 !important;
+}
+
+.example {
+    margin: 15px 0 !important;
+    color: silver;
+}
+
+.ui.large.vertical.menu {
+    background: #563D7C;
+    height: 100vh;
+    color: white;
+}
+
+.item {
+    color: white !important;
+    margin: 15px 5px;
+}
+
+.item>a {
+    color: white !important;
+}
