@@ -2,6 +2,40 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <Authors>Diyare Abdulla</Authors>
+        <Description>A Bunch of useful extensions for .NET applications.</Description>
+        <PackageIcon>FluentExtensions.png</PackageIcon>
+        <RepositoryUrl>https://github.com/D-Diyare/FluentExtensions</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageTags>Fluent, Extensions, .NET, DotNet </PackageTags>
+        <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+        <PackageProjectUrl>https://github.com/D-Diyare/FluentExtensions</PackageProjectUrl>
+        <Version>1.0</Version>
+        <Copyright>Copyright © Diyare Abdulla 2021</Copyright>
+        <Title>FluentExtensions</Title>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <PackageId>FluentExtensions.NET</PackageId>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="ListEx.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="ListEx.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\README.md">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="FluentExtensions.png" Pack="true" PackagePath="" />
+    </ItemGroup>
 
 </Project>

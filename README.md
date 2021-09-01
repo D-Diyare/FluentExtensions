@@ -10,7 +10,7 @@ Fluent Extensions is a set of more than 70 .NET extensions, it especially made f
 
 ### Install FluentExtensions via NuGet
 
-If you want to include FluentExtensions in your project, you can [install it directly from NuGet](https://www.nuget.org/packages/FluentExtensions)
+If you want to include FluentExtensions in your project, you can [install it directly from NuGet](https://www.nuget.org/packages/FluentExtensions.NET)
 
 To install FluentExtensions, run the following command in the Package Manager Console
 
