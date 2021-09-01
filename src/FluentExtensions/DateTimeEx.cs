@@ -13,7 +13,7 @@ namespace FluentExtensions
         {
             return current.AddDays(1);
         }
-        
+
         /// <summary>
         /// Gets the day before given date.
         /// </summary>
@@ -23,7 +23,7 @@ namespace FluentExtensions
         {
             return current.AddDays(-1);
         }
-        
+
         /// <summary>
         /// Gets an hour after the given date.
         /// </summary>
@@ -33,7 +33,7 @@ namespace FluentExtensions
         {
             return current.AddHours(1);
         }
-        
+
         /// <summary>
         /// Gets an hour before the given date.
         /// </summary>
@@ -43,7 +43,7 @@ namespace FluentExtensions
         {
             return current.AddHours(-1);
         }
-        
+
         /// <summary>
         /// Gets a week after the given date.
         /// </summary>
@@ -53,7 +53,7 @@ namespace FluentExtensions
         {
             return current.AddDays(7);
         }
-         
+
         /// <summary>
         /// Gets a week before the given date.
         /// </summary>
@@ -63,17 +63,17 @@ namespace FluentExtensions
         {
             return current.AddDays(-7);
         }
-         
+
         /// <summary>
         /// Gets a month before the given date.
         /// </summary>
         /// <param name="current">Date to get month from.</param>
         /// <returns>A Month before the given date.</returns>
-        public static DateTime PreviousMonth(this DateTime current)
+        public static DateTime LastMonth(this DateTime current)
         {
             return current.AddMonths(-1);
         }
-        
+
         /// <summary>
         /// Gets a month after the given date.
         /// </summary>
@@ -82,8 +82,8 @@ namespace FluentExtensions
         public static DateTime NextMonth(this DateTime current)
         {
             return current.AddMonths(1);
-        } 
-        
+        }
+
         /// <summary>
         /// Gets a year before the given date.
         /// </summary>
@@ -93,7 +93,7 @@ namespace FluentExtensions
         {
             return current.AddMonths(-1);
         }
-        
+
         /// <summary>
         /// Gets a year after the given date.
         /// </summary>
@@ -103,7 +103,7 @@ namespace FluentExtensions
         {
             return current.AddYears(1);
         }
-        
+
         /// <summary>
         /// Gets the number of days prior to the given date.
         /// </summary>
@@ -171,7 +171,7 @@ namespace FluentExtensions
         {
             return source.AddMonths(months);
         }
-        
+
         /// <summary>
         /// Gets the number of years prior the given date.
         /// </summary>
@@ -214,7 +214,7 @@ namespace FluentExtensions
         {
             return (target.Date - source.Date).TotalDays;
         }
-        
+
         /// <summary>
         /// Gets the last day of month.
         /// </summary>
@@ -242,7 +242,7 @@ namespace FluentExtensions
         /// <param name="startDate">Start of date</param>
         /// <param name="endDate">End of date.</param>
         /// <returns>Whether the given date is between the two given dates.</returns>
-        public static bool IsBetween(this DateTime dateToCompare, 
+        public static bool IsBetween(this DateTime dateToCompare,
             DateTime startDate, DateTime endDate)
         {
             return dateToCompare >= startDate && dateToCompare <= endDate;
@@ -258,7 +258,7 @@ namespace FluentExtensions
         {
             return dateToCompare < target;
         }
-        
+
         /// <summary>
         /// Determines whether the given date is already passed the target one.
         /// </summary>
@@ -269,7 +269,7 @@ namespace FluentExtensions
         {
             return dateToCompare > target;
         }
-       
+
         /// <summary>
         /// Determines whether the given date is a leap year.
         /// </summary>
@@ -290,9 +290,9 @@ namespace FluentExtensions
             var year = date.Year;
             while (!year.IsLeapYear())
                 year++;
-            return new DateTime(year, 2 ,29);
+            return new DateTime(year, 2, 29);
         }
-        
+
         /// <summary>
         /// Gets the previous leap year based on the given date.
         /// </summary>
@@ -306,7 +306,7 @@ namespace FluentExtensions
 
             return new DateTime(year, 2, 29);
         }
-        
+
         /// <summary>
         /// Calculates age based on given date.
         /// </summary>
@@ -316,7 +316,7 @@ namespace FluentExtensions
         {
             return DateTime.Now.Year - date.Year;
         }
-        
+
         /// <summary>
         /// Gets the name of the given date time.
         /// </summary>
@@ -326,7 +326,7 @@ namespace FluentExtensions
         {
             return current.DayOfWeek.ToString();
         }
-        
-        
+
+
     }
 }

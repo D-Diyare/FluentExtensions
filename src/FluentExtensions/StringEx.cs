@@ -1,10 +1,10 @@
-﻿using System;
+﻿using FluentExtensions.Enumerators;
+using System;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FluentExtensions.Enumerators;
 
 namespace FluentExtensions
 {
@@ -17,9 +17,9 @@ namespace FluentExtensions
         /// <returns>Whether this given string is Integer.</returns>
         public static bool IsInt(this string source)
         {
-            return int.TryParse(source, out var output);
+            return int.TryParse(source, out _);
         }
-        
+
         /// <summary>
         /// Determines whether the given string is Double.
         /// </summary>  
@@ -29,38 +29,38 @@ namespace FluentExtensions
         {
             return double.TryParse(source, out _);
         }
-       
+
         /// <summary>
         /// Determines whether the given string is Decimal.
         /// </summary>  
         /// <param name="source">string to check.</param>
         /// <returns>Whether this given string is Decimal.</returns>
         public static bool IsDecimal(this string source)
-        {       
+        {
             return decimal.TryParse(source, out _);
         }
-        
+
         /// <summary>
         /// Determines whether the given string is Boolean.
         /// </summary>  
         /// <param name="source">string to check.</param>
         /// <returns>Whether this given string is Boolean.</returns>
         public static bool IsBoolean(this string source)
-        {   
-            return bool.TryParse(source, out var output);
+        {
+            return bool.TryParse(source, out _);
         }
-        
+
         /// <summary>
         /// Determines whether the given string is Boolean.
         /// </summary>  
         /// <param name="source">string to check.</param>
         /// <returns>Whether this given string is Boolean.</returns>
         public static bool IsDate(this string source)
-        {   
-            return DateTime.TryParse(source, out var output);
+        {
+            return DateTime.TryParse(source, out _);
         }
-        
-        
+
+
         /// <summary>
         /// Gets string between two strings.
         /// Credits: https://stackoverflow.com/a/28723216/12352466
@@ -127,7 +127,7 @@ namespace FluentExtensions
         {
             return source.Any(char.IsDigit);
         }
-        
+
         /// <summary>
         /// Determines whether the given string contains letter(s).
         /// </summary>
@@ -137,23 +137,23 @@ namespace FluentExtensions
         {
             return source.Any(char.IsLetter);
         }
-        
+
         /// <summary>
         /// Determines whether all characters of the given text are digits.
         /// </summary>
         /// <param name="source">Text to check.</param>
         /// <returns>Whether all characters of the given text are digits</returns>
-        public static bool IsAllDigits(this string source)
+        public static bool AreAllDigits(this string source)
         {
             return source.All(char.IsDigit);
         }
-        
+
         /// <summary>
         /// Determines whether all characters of the given text are letters.
         /// </summary>
         /// <param name="source">Text to check.</param>
         /// <returns>Whether all characters of the given text are letters</returns>
-        public static bool IsAllLetters(this string source)
+        public static bool AreAllLetters(this string source)
         {
             return source.All(char.IsLetter);
         }
@@ -200,7 +200,8 @@ namespace FluentExtensions
                     return Encoding.Unicode.GetBytes(source);
                 case EncodingType.ASCII:
                     return Encoding.Unicode.GetBytes(source);
-                case EncodingType.Default: default:
+                case EncodingType.Default:
+                default:
                     return Encoding.Default.GetBytes(source);
             }
         }
@@ -214,7 +215,7 @@ namespace FluentExtensions
         {
             return string.IsNullOrEmpty(source) || string.IsNullOrWhiteSpace(source);
         }
-        
+
         /// <summary>
         /// Gets the extension of the file.
         /// </summary>
@@ -225,10 +226,10 @@ namespace FluentExtensions
         {
             if (!Path.HasExtension(filePath))
                 throw new Exception("Invalid file path.");
-            
+
             return Path.GetExtension(filePath);
         }
-        
+
         /// <summary>
         /// Determines whether the file exists.
         /// </summary>
@@ -250,12 +251,12 @@ namespace FluentExtensions
         /// <exception cref="Exception"></exception>
         public static void ToFileInDisk(this string source, string path)
         {
-            if(path.IsEmpty() || source.IsEmpty())
+            if (path.IsEmpty() || source.IsEmpty())
                 throw new Exception("Either given string or path are empty");
 
             File.WriteAllText(path, source);
         }
-        
+
         /// <summary>
         /// Create a text file asynchronously based on the given text.
         /// </summary>
@@ -264,13 +265,13 @@ namespace FluentExtensions
         /// <exception cref="Exception"></exception>
         public static async Task ToFileInDiskAsync(this string source, string path)
         {
-            if(path.IsEmpty() || source.IsEmpty())
+            if (path.IsEmpty() || source.IsEmpty())
                 throw new Exception("Either given string or path are empty");
 
-            using (var outputFile = new StreamWriter(path) )
+            using (var outputFile = new StreamWriter(path))
                 await outputFile.WriteAsync(source).ConfigureAwait(false);
         }
-          
+
         /// <summary>
         /// Gets the content of the text file.
         /// </summary>
@@ -279,12 +280,12 @@ namespace FluentExtensions
         /// <exception cref="Exception"></exception>
         public static string ReadFromDisk(this string path)
         {
-            if(path.IsEmpty())
+            if (path.IsEmpty())
                 throw new Exception("The given path is empty");
 
             return File.ReadAllText(path);
         }
-        
+
         /// <summary>
         /// Gets the content of the text file asynchronously.
         /// </summary>
@@ -293,14 +294,14 @@ namespace FluentExtensions
         /// <exception cref="Exception"></exception>
         public static async Task<string> ReadFromDiskAsync(this string path)
         {
-            if(path.IsEmpty())
+            if (path.IsEmpty())
                 throw new Exception("The given path is empty");
-            
-            using (var outputFile = File.OpenText(path) )
+
+            using (var outputFile = File.OpenText(path))
                 return await outputFile.ReadToEndAsync().ConfigureAwait(false);
         }
-        
-        
-        
+
+
+
     }
 }
