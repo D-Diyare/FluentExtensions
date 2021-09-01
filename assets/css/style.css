@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 1;
     background-color: #563D7C;
-    width: 250px;
+    width: 20rem;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
@@ -15,7 +15,6 @@
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     min-width: 0px;
-    margin-left: 260px;
 }
 
 pre {
@@ -26,6 +25,16 @@ pre code {
     margin: 0 0 5px 0;
     font-weight: 100;
 }
+
+
+/* .hljs {
+    background: #4d4e50
+} */
+
+
+/* .header.bottom-less {
+    margin-bottom: -12px !important;
+} */
 
 .extension-title {
     font-size: 1.3rem;
@@ -39,6 +48,12 @@ pre code {
 
 .ui.basic.segment {
     margin: 0 !important;
+    margin-top: 0 !important;
+}
+
+.ui.segment {
+    margin-top: 0 !important;
+    margin-left: 3rem !important;
 }
 
 .title-description {
@@ -49,7 +64,7 @@ pre code {
     margin: 0 !important;
 }
 
-.example {
+span.example {
     margin: 15px 0 !important;
     color: silver;
 }
@@ -57,6 +72,7 @@ pre code {
 .ui.large.vertical.menu {
     background: #563D7C;
     height: 100vh;
+    width: 20rem;
     color: white;
 }
 

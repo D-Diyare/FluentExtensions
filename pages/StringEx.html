@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Fluent Extensions</title>
+</head>
+
+<body>
+
+    <div class="full height">
+        <div class="toc">
+            <div class="ui large vertical menu">
+                <div class="item">
+                    <a class="ui logo icon image" href="/">
+                        <img src="/assets/images/FluentExtensions.png" width="64" height="32">
+                    </a>
+                    <a href="/"><b>Fluent Extensions</b></a>
+                </div>
+                <div class="item">
+                    <div class="header bottom-less">Introduction</div>
+                </div>
+                <a class="item" href="/introduction/getting-started.html">
+                    <div class="header bottom-less">Getting Started</div>
+                </a>
+                <div class="item">
+                    <div class="header">Extensions</div>
+                    <div class="menu">
+
+                        <a class="item" href="./NumericEx.html">
+                                Number Extensions
+                                <div class="ui label circular">22</div>
+                            </a>
+
+                        <a class="active item" href="/">
+                                String Extensions
+                                <div class="ui label circular">23</div>
+                            </a>
+
+                        <a class="item" href="./DateTimeEx.html">
+                                DateTime Extensions
+                                <div class="ui label circular">30</div>
+
+                            </a>
+
+                        <a class="item" href="./ListEx.html">
+                                List Extensions
+                                <div class="ui label circular">3</div>
+
+                            </a>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="ui segment">
+            <div class="main ui container">
+
+                <h1 class="ui dividing header">
+                    String Extensions
+                    <div class="sub header">
+                        Extensions to numeric data types such as: int, double, decimal, byte...
+                    </div>
+                </h1>
+
+                <div class="ui basic segment">
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">IsEven</p>
+                        <p class="title-description">Determines whether the given number is even.</p>
+                        <pre>
+                        <code class="language-csharp">bool IsEven(this int source);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = 2.IsEven(); // true  
+bool result = 1.IsEven(); // false </code>
+                    </pre>
+                    </h4>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>
