@@ -1,6 +1,9 @@
 <p  align="center">
-![FluentExtensions](https://github.com/D-Diyare/FluentExtensions/blob/master/docs/FluentExtensionsLogo.png)
-</p>
+  <a href="https://github.com/D-Diyare/FluentExtensions">
+    <img alt="FluentExtensions" width="600" heigth="100" src="https://github.com/D-Diyare/FluentExtensions/blob/master/docs/FluentExtensionsLogo.png">
+  </a>
+</p >
+<br/>
 
 # FluentExtensions
 Fluent Extensions is a set of more than 70 .NET extensions, it especially made for helping developers to focus on the main tasks rather than get distracted by writing the same code again and again.
