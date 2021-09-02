@@ -15,8 +15,11 @@ If you want to include FluentExtensions in your project, you can [install it dir
 To install FluentExtensions, run the following command in the Package Manager Console
 
 ```
-PM> Install-Package FluentExtensions
+PM> Install-Package FluentExtensions.NET
 ```
+
+### Documentations
+> [Docs](https://d-diyare.github.io/FluentExtensions/)
 
 ### Extensions
 
