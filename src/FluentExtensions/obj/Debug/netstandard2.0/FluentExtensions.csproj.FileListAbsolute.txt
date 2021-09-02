@@ -1,0 +1,10 @@
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\bin\Debug\netstandard2.0\FluentExtensions.deps.json
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\bin\Debug\netstandard2.0\FluentExtensions.dll
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\bin\Debug\netstandard2.0\FluentExtensions.pdb
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\obj\Debug\netstandard2.0\FluentExtensions.csproj.AssemblyReference.cache
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\obj\Debug\netstandard2.0\FluentExtensions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\obj\Debug\netstandard2.0\FluentExtensions.AssemblyInfoInputs.cache
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\obj\Debug\netstandard2.0\FluentExtensions.AssemblyInfo.cs
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\obj\Debug\netstandard2.0\FluentExtensions.csproj.CoreCompileInputs.cache
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\obj\Debug\netstandard2.0\FluentExtensions.dll
+C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\obj\Debug\netstandard2.0\FluentExtensions.pdb

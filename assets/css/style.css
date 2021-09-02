@@ -52,6 +52,8 @@ pre code {
 }
 
 .ui.segment {
+    border: none;
+    box-shadow: none;
     margin-top: 0 !important;
     margin-left: 3rem !important;
 }

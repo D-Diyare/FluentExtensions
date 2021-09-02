@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FluentExtensions.NET</id>
+    <version>1.1.0</version>
+    <title>FluentExtensions</title>
+    <authors>Diyare Abdulla</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>FluentExtensions.png</icon>
+    <projectUrl>https://github.com/D-Diyare/FluentExtensions</projectUrl>
+    <description>A Bunch of useful extensions for .NET applications.</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright © Diyare Abdulla 2021</copyright>
+    <tags>Fluent, Extensions, .NET, DotNet</tags>
+    <readme>README.md</readme>
+    <repository type="git" url="https://github.com/D-Diyare/FluentExtensions" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\bin\Release\netstandard2.0\FluentExtensions.dll" target="lib\netstandard2.0\FluentExtensions.dll" />
+    <file src="C:\Users\Douglas\RiderProjects\FluentExtensions\README.md" target="README.md" />
+    <file src="C:\Users\Douglas\RiderProjects\FluentExtensions\src\FluentExtensions\FluentExtensions.png" target="FluentExtensions.png" />
+  </files>
+</package>
