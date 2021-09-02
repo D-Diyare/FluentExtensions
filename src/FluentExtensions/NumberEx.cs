@@ -16,7 +16,7 @@ namespace FluentExtensions
         {
             return source % 2 == 0;
         }
-        
+
         /// <summary>
         /// Determines whether the given target is odd.
         /// </summary>
@@ -26,7 +26,7 @@ namespace FluentExtensions
         {
             return source % 2 != 0;
         }
-        
+
         /// <summary>
         /// Determines whether the current number is greater than the target one.
         /// </summary>
@@ -61,7 +61,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Gets the datetime in past from given number of days.
+        /// Gets the date time in past from given number of days.
         /// </summary>
         /// <param name="days">Number of days you to get in past.</param>
         /// <returns><see cref="days" /> days ago.</returns>
@@ -71,7 +71,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Gets the datetime in future from given number of days.
+        /// Gets the date time in future from given number of days.
         /// </summary>
         /// <param name="days">Number of days you to get in future.</param>
         /// <returns><see cref="days" /> days since.</returns>
@@ -81,7 +81,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Gets the datetime in past from given number of weeks.
+        /// Gets the date time in past from given number of weeks.
         /// </summary>
         /// <param name="weeks">Number of weeks you to get in past.</param>
         /// <returns><see cref="weeks" /> weeks ago.</returns>
@@ -92,48 +92,48 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Gets the datetime in future from given number of weeks.
+        /// Gets the date time in future from given number of weeks.
         /// </summary>
         /// <param name="weeks">Number of weeks you to get in future.</param>
         /// <returns><see cref="weeks" /> weeks since.</returns>
         public static DateTime WeeksAfter(this int weeks)
-        {            
+        {
             var days = weeks * 7;
             return DateTime.Now.AddDays(days);
         }
-        
+
         /// <summary>
         /// Converts the given number into days.
         /// </summary>
         /// <param name="num">Number of days.</param>
-        /// <returns>The Days from given number in datetime format.</returns>
+        /// <returns>The Days from given number in date time format.</returns>
         public static DateTime Days(this int num)
         {
             return DateTime.MinValue + TimeSpan.FromDays(num);
         }
- 
+
         /// <summary>
-        /// Gets the datetime in future from given number of months.
+        /// Gets the date time in future from given number of months.
         /// </summary>
         /// <param name="months">Number of months you to get in future.</param>
         /// <returns><see cref="months" /> months since.</returns>
         public static DateTime MonthsAfter(this int months)
-        {            
+        {
             return DateTime.Now.AddMonths(months);
         }
 
         /// <summary>
-        /// Gets the datetime in past from given number of months.
+        /// Gets the date time in past from given number of months.
         /// </summary>
         /// <param name="months">Number of months you to get in past.</param>
         /// <returns><see cref="months" /> months ago.</returns>
         public static DateTime MonthsAgo(this int months)
-        {            
+        {
             return DateTime.Now.AddMonths(-months);
         }
-        
+
         /// <summary>
-        /// Gets the datetime in past from given number of years.
+        /// Gets the date time in past from given number of years.
         /// </summary>
         /// <param name="years">Number of years you to get in past.</param>
         /// <returns><see cref="years" /> years ago.</returns>
@@ -143,12 +143,12 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Gets the datetime in future from given number of years.
+        /// Gets the date time in future from given number of years.
         /// </summary>
         /// <param name="years">Number of years you to get in future.</param>
         /// <returns><see cref="years" /> years since.</returns>
         public static DateTime YearsAfter(this int years)
-        {            
+        {
             return DateTime.Now.AddYears(years);
         }
 
@@ -158,7 +158,7 @@ namespace FluentExtensions
         /// <param name="year">Year to check for.</param>
         /// <returns>Whether the given year is a leap year.</returns>
         public static bool IsLeapYear(this int year)
-        {            
+        {
             return DateTime.IsLeapYear(year);
         }
 
@@ -168,7 +168,7 @@ namespace FluentExtensions
         /// <param name="year">Year to check.</param>
         /// <returns>The Next leap year based on the given year</returns>
         public static int NextLeapYear(this int year)
-        {            
+        {
             while (!year.IsLeapYear())
                 year++;
             return year;
@@ -180,7 +180,7 @@ namespace FluentExtensions
         /// <param name="year">Year to check.</param>
         /// <returns>The Previous leap year based on the given year</returns>
         public static int PreviousLeapYear(this int year)
-        {            
+        {
             while (!year.IsLeapYear())
                 year--;
             return year;
@@ -196,7 +196,7 @@ namespace FluentExtensions
         {
             return Convert.ToBase64String(source, options);
         }
-        
+
         /// <summary>
         /// Separates every 3 number by comma.
         /// </summary>
@@ -217,7 +217,7 @@ namespace FluentExtensions
         {
             return source.ToString("N0", culture);
         }
-        
+
         /// <summary>
         /// Generating Random Numbers.
         /// </summary>
@@ -227,7 +227,7 @@ namespace FluentExtensions
         {
             var str = new StringBuilder();
             var randomize = new Random();
-            
+
             for (var i = 0; i < length; ++i)
                 str.Append(randomize.Next(10));
             return str.ToString();
@@ -260,6 +260,6 @@ namespace FluentExtensions
             }
             return str.ToString();
         }
-        
+
     }
 }

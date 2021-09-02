@@ -11,7 +11,7 @@
         <PackageTags>Fluent, Extensions, .NET, DotNet </PackageTags>
         <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/D-Diyare/FluentExtensions</PackageProjectUrl>
-        <Version>1.0</Version>
+        <Version>1.1</Version>
         <Copyright>Copyright © Diyare Abdulla 2021</Copyright>
         <Title>FluentExtensions</Title>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

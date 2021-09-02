@@ -205,6 +205,16 @@ namespace FluentExtensions
         }
 
         /// <summary>
+        /// Gets the last day of month.
+        /// </summary>
+        /// <param name="date">Date to check.</param>
+        /// <returns>The Last day of month.</returns>
+        public static DateTime LastDayOfMonth(this DateTime date)
+        {
+            return date.FirstDayOfMonth().NextMonth().Yesterday();
+        }
+
+        /// <summary>
         /// Gets the number of days left to the target date.
         /// </summary>
         /// <param name="source">Date to check.</param>
@@ -213,16 +223,6 @@ namespace FluentExtensions
         public static double DaysLeft(this DateTime source, DateTime target)
         {
             return (target.Date - source.Date).TotalDays;
-        }
-
-        /// <summary>
-        /// Gets the last day of month.
-        /// </summary>
-        /// <param name="date">Date to check.</param>
-        /// <returns>The Last day of month.</returns>
-        public static DateTime LastDayOfMonth(this DateTime date)
-        {
-            return date.FirstDayOfMonth().NextMonth().Yesterday();
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace FluentExtensions
         /// </summary>
         /// <param name="date">Date to check for.</param>
         /// <returns>Whether the given date is a leap year.</returns>
-        public static bool IsYearLeap(this DateTime date)
+        public static bool IsLeapYear(this DateTime date)
         {
             return DateTime.IsLeapYear(date.Year);
         }

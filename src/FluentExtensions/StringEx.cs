@@ -51,7 +51,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Determines whether the given string is Boolean.
+        /// Determines whether the given string is Date.
         /// </summary>  
         /// <param name="source">string to check.</param>
         /// <returns>Whether this given string is Boolean.</returns>
