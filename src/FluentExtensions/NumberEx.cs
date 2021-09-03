@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentExtensions.Enumerators;
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ namespace FluentExtensions
 {
     public static class NumberEx
     {
+
         /// <summary>
         /// Determines whether the given target is even.
         /// </summary>
@@ -261,5 +263,91 @@ namespace FluentExtensions
             return str.ToString();
         }
 
+        /// <summary>
+        /// Converts given number to kilobytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <returns>Kilobytes based on given number.</returns>
+        public static double ToKB(this int number, DigitalStorage from = DigitalStorage.KB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.MB:
+                    return number * 1000;
+                case DigitalStorage.GB:
+                    return number * 1000000;
+                case DigitalStorage.TB:
+                    return number * 1000000000;
+                case DigitalStorage.KB:
+                default:
+                    return number;
+            }
+        }
+
+        /// <summary>
+        /// Converts given number to megabytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <param name="from">From type.</param>
+        /// <returns>Megabytes based on given number and given type to convert from.</returns>
+        public static double ToMB(this int number, DigitalStorage from = DigitalStorage.MB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.KB:
+                    return number * 0.001;
+                case DigitalStorage.GB:
+                    return number * 1000;
+                case DigitalStorage.TB:
+                    return number * 1000000;
+                case DigitalStorage.MB:
+                default:
+                    return number;
+            }
+        }
+
+        /// <summary>
+        /// Converts given number to gigabytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <param name="from">From type.</param>
+        /// <returns>Gigabytes based on given number and given type to convert from.</returns>
+        public static double ToGB(this int number, DigitalStorage from = DigitalStorage.GB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.KB:
+                    return number.ToMB(DigitalStorage.KB) * 0.001;
+                case DigitalStorage.MB:
+                    return number * 0.001;
+                case DigitalStorage.TB:
+                    return number * 1000;
+                case DigitalStorage.GB:
+                default:
+                    return number;
+            }
+        }
+
+        /// <summary>
+        /// Converts given number to terabytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <param name="from">From type.</param>
+        /// <returns>Gigabytes based on given number and given type to convert from.</returns>
+        public static double ToTB(this int number, DigitalStorage from = DigitalStorage.TB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.KB:
+                    return number.ToGB(DigitalStorage.KB) * 0.001;
+                case DigitalStorage.MB:
+                    return number.ToGB(DigitalStorage.MB) * 0.001;
+                case DigitalStorage.GB:
+                    return number * 0.001;
+                case DigitalStorage.TB:
+                default:
+                    return number;
+            }
+        }
     }
 }

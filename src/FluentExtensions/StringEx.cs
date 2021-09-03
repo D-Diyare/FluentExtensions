@@ -301,7 +301,60 @@ namespace FluentExtensions
                 return await outputFile.ReadToEndAsync().ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Adds text to end of another text.
+        /// </summary>
+        /// <param name="text">Source text.</param>
+        /// <param name="textToAdd">Text to add.</param>
+        /// <param name="addSpaceBeforeAddition">Whether to add space before the addition.</param>
+        /// <returns>A Combined string of the old and new text.</returns>
+        public static string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition = true)
+        {
+            var additionText = addSpaceBeforeAddition ? string.Concat(" ", textToAdd) : textToAdd;
+            return string.Concat(text, additionText);
+        }
 
+        /// <summary>
+        /// Adds text to start of another text.
+        /// </summary>
+        /// <param name="text">Source text.</param>
+        /// <param name="textToAdd">Text to add.</param>
+        /// <param name="addSpaceAfterAddition">Whether to add space after the addition.</param>
+        /// <returns>A Combined string of the old and new text.</returns>
+        public static string AddToStart(this string text, string textToAdd, bool addSpaceAfterAddition = true)
+        {
+            var additionText = addSpaceAfterAddition ? string.Concat(textToAdd, " ") : textToAdd;
+            return string.Concat(additionText, text);
+        }
 
+        /// <summary>
+        /// Gets portion of string based on given characters and position to get. 
+        /// </summary>
+        /// <param name="source">Text to take the portion from.</param>
+        /// <param name="characters">Number of characters to get.</param>
+        /// <param name="from">Whether to take the portion for the start or from the end.</param>
+        /// <returns>A portion of string based on given characters and position to get.</returns>
+        public static string Take(this string source, int characters, Position from = Position.Start)
+        {
+            var position = from == Position.Start ? 0 : source.Length;
+            var startIndex = from == Position.End ? (position - characters) : position;
+            return source.Substring(startIndex, characters);
+        }
+
+        /// <summary>
+        /// Replaces multiple values inside a string with one value.
+        /// </summary>
+        /// <param name="source">Text to apply replaces.</param>
+        /// <param name="values">Values to replace.</param>
+        /// <param name="value">value to replace values with.</param>
+        /// <returns>A Text based on replaced values.</returns>
+        public static string ReplaceMultipleWithOne(this string source, string[] values, string value)
+        {
+            string result = source;
+            foreach (var val in values)
+                result = result.Replace(val, value);
+
+            return result;
+        }
     }
 }

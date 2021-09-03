@@ -8,10 +8,20 @@
         <RepositoryUrl>https://github.com/D-Diyare/FluentExtensions</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>Fluent, Extensions, .NET, DotNet </PackageTags>
-        <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+        <PackageTags>extension, datetime, date, dotnet, extension-methods, fluent, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions</PackageTags>
+        <PackageReleaseNotes>
+          New Extensions Added:
+- string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition = true);
+- string AddToStart(this string text, string textToAdd, bool addSpaceafterAddition = true);
+- string ReplaceMultipleWithOne(this string source, string[] values, string value)
+- string Take(this string source, int characters, Position from = Position.Start);
+- double ToKB(this int number, DigitalStorage from = DigitalStorage.KB);
+- double ToMB(this int number, DigitalStorage from = DigitalStorage.MB);
+- double ToGB(this int number, DigitalStorage from = DigitalStorage.GB);
+- double ToTB(this int number, DigitalStorage from = DigitalStorage.TB);
+        </PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/D-Diyare/FluentExtensions</PackageProjectUrl>
-        <Version>1.1</Version>
+        <Version>1.2</Version>
         <Copyright>Copyright © Diyare Abdulla 2021</Copyright>
         <Title>FluentExtensions</Title>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
