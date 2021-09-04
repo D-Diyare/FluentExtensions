@@ -133,7 +133,7 @@ bool IsDouble(this string source);
 bool IsDecimal(this string source);
 
 // Determines whether the given string is Boolean.
-IsBoolean(this string source);
+bool IsBoolean(this string source);
 
 // Determines whether the given string is Date.
 bool IsDate(this string source);
@@ -182,7 +182,7 @@ string GetFileExtension(this string filePath);
 bool FileExists(this string filePath);
 
 // Gets the content of the text file.
-ToFileInDisk(this string source, string path);
+void ToFileInDisk(this string source, string path);
 
 // Gets the content of the text file asynchronously.
 Task ToFileInDiskAsync(this string source, string path);
