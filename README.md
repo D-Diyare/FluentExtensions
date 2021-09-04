@@ -6,7 +6,7 @@
 <br/>
 
 # FluentExtensions
-Fluent Extensions is a set of more than 70 .NET extensions, it especially made for helping developers to focus on the main tasks rather than get distracted by writing the same code again and again.
+Fluent Extensions is a set of more than 80 .NET extensions, it especially made for helping developers to focus on the main tasks rather than get distracted by writing the same code again and again.
 
 ### Install FluentExtensions via NuGet
 
@@ -91,6 +91,20 @@ string RandomDigits(this int length);
 
 // Generating Random Numbers.
 string GenerateRandomString(this int length, bool isUpperCase = false, bool containNumbers = false);
+
+// Converts given number to kilobytes.
+double ToKB(this int number, DigitalStorage from = DigitalStorage.KB);
+
+// Converts given number to megabytes.
+double ToMB(this int number, DigitalStorage from = DigitalStorage.MB);
+
+// Converts the given number to gigabytes.
+double ToGB(this int number, DigitalStorage from = DigitalStorage.GB);
+
+// Converts the given number to terabytes.
+double ToTB(this int number, DigitalStorage from = DigitalStorage.TB)
+
+
 ```
 
 #### Extensions to Strings
@@ -165,6 +179,21 @@ string ReadFromDisk(this string path);
 
 // Gets the content of the text file asynchronously.
 Task<string> ReadFromDiskAsync(this string path);
+
+// Adds text to end of another text.
+string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition = true);
+
+// Adds text to start of another text.
+string AddToStart(this string text, string textToAdd, bool addSpaceAfterAddition = true);
+
+// Gets portion of string based on given characters and position to get. 
+string Take(this string source, int characters, Position from = Position.Start);
+
+// Replaces multiple values inside a string with one value.
+string ReplaceMultipleWithOne(this string source, string[] values, string value);
+
+
+
 ```
 
 #### Extensions to DateTime

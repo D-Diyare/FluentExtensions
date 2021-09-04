@@ -264,7 +264,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Converts given number to kilobytes.
+        /// Converts the given number to kilobytes.
         /// </summary>
         /// <param name="number">Number to convert.</param>
         /// <returns>Kilobytes based on given number.</returns>
@@ -285,7 +285,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Converts given number to megabytes.
+        /// Converts the given number to megabytes.
         /// </summary>
         /// <param name="number">Number to convert.</param>
         /// <param name="from">From type.</param>
@@ -307,7 +307,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Converts given number to gigabytes.
+        /// Converts the given number to gigabytes.
         /// </summary>
         /// <param name="number">Number to convert.</param>
         /// <param name="from">From type.</param>
@@ -329,7 +329,7 @@ namespace FluentExtensions
         }
 
         /// <summary>
-        /// Converts given number to terabytes.
+        /// Converts the given number to terabytes.
         /// </summary>
         /// <param name="number">Number to convert.</param>
         /// <param name="from">From type.</param>
