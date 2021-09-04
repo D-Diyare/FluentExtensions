@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/images/FluentExtensions.png" />
     <title>Fluent Extensions</title>
 </head>
 
@@ -35,12 +36,12 @@
 
                         <a class="item" href="./NumericEx.html">
                                 Number Extensions
-                                <div class="ui label circular">22</div>
+                                <div class="ui label circular">26</div>
                             </a>
 
                         <a class="active item" href="">
                                 String Extensions
-                                <div class="ui label circular">23</div>
+                                <div class="ui label circular">27</div>
                             </a>
 
                         <a class="item" href="./DateTimeEx.html">
@@ -294,6 +295,45 @@ bool result = "".IsEmpty(); // true </code>
                         <pre>
                         <code class="language-csharp">Task<string> ReadFromDiskAsync(this string path);</code><span class="example">Example:</span>
                         <code class="language-csharp">string result = await "C:\\file.txt".ReadFromDiskAsync(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">AddToEnd</p>
+                        <p class="title-description">Adds text to end of another text.</p>
+                        <pre>
+                        <code class="language-csharp">string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition = true);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "Hello".AddToEnd("World!"); // Hello World!
+string result = "Hello".AddToEnd("World!", false); // HelloWorld!</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">AddToStart</p>
+                        <p class="title-description">Adds text to start of another text.</p>
+                        <pre>
+                        <code class="language-csharp">string AddToStart(this string text, string textToAdd, bool addSpaceBeforeAddition = true);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "World!".AddToStart("Hello"); // Hello World!
+string result = "World!".AddToStart("Hello", false); // HelloWorld!</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">Take</p>
+                        <p class="title-description">Gets portion of string based on given characters and position to get. </p>
+                        <pre>
+                        <code class="language-csharp">string Take(this string source, int characters, Position from = Position.Start);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "Hello From FluentExtensions".Take(16, Position.End); // FluentExtensions
+string result = "Hello From FluentExtensions".Take(5); // Hello</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ReplaceMultipleWithOne</p>
+                        <p class="title-description">Gets portion of string based on given characters and position to get. </p>
+                        <pre>
+                        <code class="language-csharp">string ReplaceMultipleWithOne(this string source, string[] values, string value);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "Hello,From.FluentExtensions".ReplaceMultipleWithOne(new string[] {",", "."}, " "); // Hello From FluentExtensions</code>
                     </pre>
                     </h4>
 

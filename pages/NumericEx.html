@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/images/FluentExtensions.png" />
     <title>Fluent Extensions</title>
 </head>
 
@@ -35,12 +36,12 @@
 
                         <a class="active item" href="">
                                 Number Extensions
-                                <div class="ui label circular">22</div>
+                                <div class="ui label circular">26</div>
                             </a>
 
                         <a class="item" href="./StringEx.html">
                                 String Extensions
-                                <div class="ui label circular">23</div>
+                                <div class="ui label circular">27</div>
                             </a>
 
                         <a class="item" href="./DateTimeEx.html">
@@ -291,6 +292,46 @@ string result = 6.RandomDigits();  </code>
                         <code class="language-csharp">string GenerateRandomString(this int length, bool isUpperCase = false, bool containNumbers = false);</code><span class="example">Example:</span>
                         <code class="language-csharp">string result = 4.GenerateRandomString();
 string result = 6.GenerateRandomString(isUpperCase: true, containNumbers: true);  </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToKB</p>
+                        <p class="title-description">Converts given number to kilobytes.</p>
+                        <pre>
+                        <code class="language-csharp">double ToKB(this int number, DigitalStorage from = DigitalStorage.KB);</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = 4.ToKB(DigitalStorage.MB);
+double result = 6.ToKB(DigitalStorage.GB);  </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToMB</p>
+                        <p class="title-description">Converts given number to megabytes.</p>
+                        <pre>
+                        <code class="language-csharp">double ToMB(this int number, DigitalStorage from = DigitalStorage.MB);</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = 4.ToMB(DigitalStorage.KB);
+double result = 6.ToMB(DigitalStorage.GB);  </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToGB</p>
+                        <p class="title-description">Converts given number to gigabytes.</p>
+                        <pre>
+                        <code class="language-csharp">double ToGB(this int number, DigitalStorage from = DigitalStorage.GB);</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = 4.ToGB(DigitalStorage.MB);
+double result = 6.ToGB(DigitalStorage.TB);  </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ToTB</p>
+                        <p class="title-description">Converts given number to terabytes.</p>
+                        <pre>
+                        <code class="language-csharp">double ToTB(this int number, DigitalStorage from = DigitalStorage.TB);</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = 4.ToTB(DigitalStorage.MB);
+double result = 6.ToTB(DigitalStorage.GB);  </code>
                     </pre>
                     </h4>
 
