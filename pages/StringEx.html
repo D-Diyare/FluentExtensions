@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Bunch of useful extensions for .NET applications." />
+    <meta name="keywords" content="extension, datetime, date, dotnet, extension-methods, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
+    <meta content="Fluent Extensions" name="FluentExtensions" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
         referrerpolicy="no-referrer" />
@@ -36,12 +39,12 @@
 
                         <a class="item" href="./NumericEx.html">
                                 Number Extensions
-                                <div class="ui label circular">26</div>
+                                <div class="ui label circular">30</div>
                             </a>
 
                         <a class="active item" href="">
                                 String Extensions
-                                <div class="ui label circular">27</div>
+                                <div class="ui label circular">40</div>
                             </a>
 
                         <a class="item" href="./DateTimeEx.html">
@@ -334,6 +337,114 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                         <pre>
                         <code class="language-csharp">string ReplaceMultipleWithOne(this string source, string[] values, string value);</code><span class="example">Example:</span>
                         <code class="language-csharp">string result = "Hello,From.FluentExtensions".ReplaceMultipleWithOne(new string[] {",", "."}, " "); // Hello From FluentExtensions</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DriveFreeSpace</p>
+                        <p class="title-description">Gets the free space of the given drive in gigabytes.</p>
+                        <pre>
+                        <code class="language-csharp">static string DriveFreeSpace(this string driveLetter);</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = "C".DriveFreeSpace();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DriveTotalSize</p>
+                        <p class="title-description">Gets the total size of the given drive in gigabytes.</p>
+                        <pre>
+                        <code class="language-csharp">static string DriveTotalSize(this string driveLetter);</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = "C".DriveTotalSize();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DriveFormat</p>
+                        <p class="title-description">Gets the format of the given drive.</p>
+                        <pre>
+                        <code class="language-csharp">static string DriveFormat(this string driveLetter);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string result = "C".DriveFormat();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DriveType</p>
+                        <p class="title-description">Gets the type of the given drive.</p>
+                        <pre>
+                        <code class="language-csharp">static DriveType DriveType(this string driveLetter);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DriveType result = "C".DriveType();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">DeleteFile</p>
+                        <p class="title-description">Delete the given file from disk.</p>
+                        <pre>
+                        <code class="language-csharp">static void DeleteFile(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">"C:\\file.txt".DeleteFile();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">HideFile</p>
+                        <p class="title-description">Hides the given file from disk.</p>
+                        <pre>
+                        <code class="language-csharp">static void HideFile(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">"C:\\file.txt".HideFile();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">ShowFile</p>
+                        <p class="title-description">Shows the given file from disk (if it's already hidden).</p>
+                        <pre>
+                        <code class="language-csharp">static void ShowFile(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">"C:\\file.txt".ShowFile();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">CreatedDate</p>
+                        <p class="title-description">Gets the date and time when this given file created.</p>
+                        <pre>
+                        <code class="language-csharp">static void CreatedDate(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">DateTime result = "C:\\file.txt".CreatedDate();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">CopyFile</p>
+                        <p class="title-description">Copies the file to the given destination (overwrites it if it's already exist).</p>
+                        <pre>
+                        <code class="language-csharp">static void CopyFile(this string filePath, string destination);</code><span class="example">Example:</span>
+                        <code class="language-csharp">"C:\\file.txt".CopyFile("D:\\file.txt");</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">MoveFile</p>
+                        <p class="title-description">Moves the file to the given destination (overwrites it if it's already exist).</p>
+                        <pre>
+                        <code class="language-csharp">static void MoveFile(this string filePath, string destination);</code><span class="example">Example:</span>
+                        <code class="language-csharp">"C:\\file.txt".MoveFile("D:\\file.txt");</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">FileSizeInKB</p>
+                        <p class="title-description">Gets the file size in kilobytes.</p>
+                        <pre>
+                        <code class="language-csharp">static double FileSizeInKB(this string filePath)</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = "C:\\file.txt".FileSizeInKB();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header">
+                        <p class="extension-title">FileSizeInMB</p>
+                        <p class="title-description">Gets the file size in megabytes.</p>
+                        <pre>
+                        <code class="language-csharp">static double FileSizeInMB(this string filePath)</code><span class="example">Example:</span>
+                        <code class="language-csharp">double result = "C:\\file.txt".FileSizeInMB();</code>
                     </pre>
                     </h4>
 
