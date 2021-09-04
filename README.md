@@ -206,43 +206,43 @@ string Take(this string source, int characters, Position from = Position.Start);
 string ReplaceMultipleWithOne(this string source, string[] values, string value);
 
 // Gets the free space of the given drive in gigabytes.
-public static string DriveFreeSpace(this string driveLetter);
+string DriveFreeSpace(this string driveLetter);
 
 // Gets the total size of the given drive in gigabytes.
-public static string DriveTotalSize(this string driveLetter);
+string DriveTotalSize(this string driveLetter);
 
 // Gets the total size of the given drive in gigabytes.
-public static string DriveTotalSize(this string driveLetter);
+string DriveTotalSize(this string driveLetter);
 
 // Gets the format of the given drive.
-public static string DriveFormat(this string driveLetter);
+string DriveFormat(this string driveLetter);
 
 // Gets the type of the given drive.
-public static DriveType DriveType(this string driveLetter);
+DriveType DriveType(this string driveLetter);
 
 // Delete the given file from disk.
-public static void DeleteFile(this string filePath);
+void DeleteFile(this string filePath);
 
 // Hides the given file from disk.
-public static void HideFile(this string filePath);
+void HideFile(this string filePath);
 
-// Shows the given file from disk (if it's already hidden).
-public static void ShowFile(this string filePath);
+// Shows the given file from the disk (if it's already hidden).
+void ShowFile(this string filePath);
 
-// Gets the date and time when this given file created.
-public static DateTime CreatedDate(this string filePath);
+// Gets the date and time when this given file was created.
+DateTime CreatedDate(this string filePath);
 
-// Copies the file to the given destination (overwrites it if it's already exist).
-public static void CopyFile(this string filePath, string destination);
+// Copies the file to the given destination (overwrites it if it already exists).
+void CopyFile(this string filePath, string destination);
 
-// Moves the file to the given destination (overwrites it if it's already exist).
-public static void MoveFile(this string filePath, string destination);
+// Moves the file to the given destination (overwrites it if it already exists).
+void MoveFile(this string filePath, string destination);
 
 // Gets the file size in kilobytes.
-public static double FileSizeInKB(this string filePath);
+double FileSizeInKB(this string filePath);
 
 // Gets the file size in megabytes.
-public static double FileSizeInMB(this string filePath);
+double FileSizeInMB(this string filePath);
 
 
 ```
