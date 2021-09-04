@@ -6,7 +6,7 @@
 <br/>
 
 # FluentExtensions
-Fluent Extensions is a set of more than 80 .NET extensions, it especially made for helping developers to focus on the main tasks rather than get distracted by writing the same code again and again.
+Fluent Extensions is a set of more than 100 .NET extensions, it especially made for helping developers to focus on the main tasks rather than get distracted by writing the same code again and again for simple actions, FluentExtensions akso increases readability.
 
 ### Install FluentExtensions via NuGet
 
@@ -16,6 +16,7 @@ To install FluentExtensions, run the following command in the Package Manager Co
 
 ```
 PM> Install-Package FluentExtensions.NET
+
 ```
 
 ### Documentations
@@ -103,6 +104,18 @@ double ToGB(this int number, DigitalStorage from = DigitalStorage.GB);
 
 // Converts the given number to terabytes.
 double ToTB(this int number, DigitalStorage from = DigitalStorage.TB)
+
+// Converts given number to kilobytes.
+double ToKB(this long number, DigitalStorage from = DigitalStorage.KB);
+
+// Converts given number to megabytes.
+double ToMB(this long number, DigitalStorage from = DigitalStorage.MB);
+
+// Converts the given number to gigabytes.
+double ToGB(this long number, DigitalStorage from = DigitalStorage.GB);
+
+// Converts the given number to terabytes.
+double ToTB(this long number, DigitalStorage from = DigitalStorage.TB)
 
 
 ```
@@ -192,6 +205,44 @@ string Take(this string source, int characters, Position from = Position.Start);
 // Replaces multiple values inside a string with one value.
 string ReplaceMultipleWithOne(this string source, string[] values, string value);
 
+// Gets the free space of the given drive in gigabytes.
+public static string DriveFreeSpace(this string driveLetter);
+
+// Gets the total size of the given drive in gigabytes.
+public static string DriveTotalSize(this string driveLetter);
+
+// Gets the total size of the given drive in gigabytes.
+public static string DriveTotalSize(this string driveLetter);
+
+// Gets the format of the given drive.
+public static string DriveFormat(this string driveLetter);
+
+// Gets the type of the given drive.
+public static DriveType DriveType(this string driveLetter);
+
+// Delete the given file from disk.
+public static void DeleteFile(this string filePath);
+
+// Hides the given file from disk.
+public static void HideFile(this string filePath);
+
+// Shows the given file from disk (if it's already hidden).
+public static void ShowFile(this string filePath);
+
+// Gets the date and time when this given file created.
+public static DateTime CreatedDate(this string filePath);
+
+// Copies the file to the given destination (overwrites it if it's already exist).
+public static void CopyFile(this string filePath, string destination);
+
+// Moves the file to the given destination (overwrites it if it's already exist).
+public static void MoveFile(this string filePath, string destination);
+
+// Gets the file size in kilobytes.
+public static double FileSizeInKB(this string filePath);
+
+// Gets the file size in megabytes.
+public static double FileSizeInMB(this string filePath);
 
 
 ```

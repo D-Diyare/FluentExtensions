@@ -273,11 +273,11 @@ namespace FluentExtensions
             switch (from)
             {
                 case DigitalStorage.MB:
-                    return number * 1000;
+                    return number * 1024;
                 case DigitalStorage.GB:
-                    return number * 1000000;
+                    return number * 1048576;
                 case DigitalStorage.TB:
-                    return number * 1000000000;
+                    return number.ToGB(DigitalStorage.TB) * 1048576;
                 case DigitalStorage.KB:
                 default:
                     return number;
@@ -295,11 +295,11 @@ namespace FluentExtensions
             switch (from)
             {
                 case DigitalStorage.KB:
-                    return number * 0.001;
+                    return number / 1024;
                 case DigitalStorage.GB:
-                    return number * 1000;
+                    return number * 1024;
                 case DigitalStorage.TB:
-                    return number * 1000000;
+                    return number * 1048576;
                 case DigitalStorage.MB:
                 default:
                     return number;
@@ -317,11 +317,11 @@ namespace FluentExtensions
             switch (from)
             {
                 case DigitalStorage.KB:
-                    return number.ToMB(DigitalStorage.KB) * 0.001;
+                    return number.ToMB(DigitalStorage.KB) / 1024;
                 case DigitalStorage.MB:
-                    return number * 0.001;
+                    return number / 1024;
                 case DigitalStorage.TB:
-                    return number * 1000;
+                    return number * 1024;
                 case DigitalStorage.GB:
                 default:
                     return number;
@@ -339,11 +339,98 @@ namespace FluentExtensions
             switch (from)
             {
                 case DigitalStorage.KB:
-                    return number.ToGB(DigitalStorage.KB) * 0.001;
+                    return number.ToGB(DigitalStorage.KB) / 1024;
                 case DigitalStorage.MB:
-                    return number.ToGB(DigitalStorage.MB) * 0.001;
+                    return number.ToGB(DigitalStorage.MB) / 1024;
                 case DigitalStorage.GB:
-                    return number * 0.001;
+                    return number / 1024;
+                case DigitalStorage.TB:
+                default:
+                    return number;
+            }
+        }
+
+        /// <summary>
+        /// Converts the given number to kilobytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <returns>Kilobytes based on given number.</returns>
+        public static double ToKB(this long number, DigitalStorage from = DigitalStorage.KB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.MB:
+                    return number * 1024;
+                case DigitalStorage.GB:
+                    return number * 1048576;
+                case DigitalStorage.TB:
+                    return number.ToGB(DigitalStorage.TB) * 1048576;
+                case DigitalStorage.KB:
+                default:
+                    return number;
+            }
+        }
+
+        /// <summary>
+        /// Converts the given number to megabytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <param name="from">From type.</param>
+        /// <returns>Megabytes based on given number and given type to convert from.</returns>
+        public static double ToMB(this long number, DigitalStorage from = DigitalStorage.MB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.KB:
+                    return number / 1024;
+                case DigitalStorage.GB:
+                    return number * 1024;
+                case DigitalStorage.TB:
+                    return number * 1048576;
+                case DigitalStorage.MB:
+                default:
+                    return number;
+            }
+        }
+
+        /// <summary>
+        /// Converts the given number to gigabytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <param name="from">From type.</param>
+        /// <returns>Gigabytes based on given number and given type to convert from.</returns>
+        public static double ToGB(this long number, DigitalStorage from = DigitalStorage.GB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.KB:
+                    return number.ToMB(DigitalStorage.KB) / 1024;
+                case DigitalStorage.MB:
+                    return number / 1024;
+                case DigitalStorage.TB:
+                    return number * 1024;
+                case DigitalStorage.GB:
+                default:
+                    return number;
+            }
+        }
+
+        /// <summary>
+        /// Converts the given number to terabytes.
+        /// </summary>
+        /// <param name="number">Number to convert.</param>
+        /// <param name="from">From type.</param>
+        /// <returns>Gigabytes based on given number and given type to convert from.</returns>
+        public static double ToTB(this long number, DigitalStorage from = DigitalStorage.TB)
+        {
+            switch (from)
+            {
+                case DigitalStorage.KB:
+                    return number.ToGB(DigitalStorage.KB) / 1024;
+                case DigitalStorage.MB:
+                    return number.ToGB(DigitalStorage.MB) / 1024;
+                case DigitalStorage.GB:
+                    return number / 1024;
                 case DigitalStorage.TB:
                 default:
                     return number;

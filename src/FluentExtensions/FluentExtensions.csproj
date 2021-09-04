@@ -11,17 +11,24 @@
         <PackageTags>extension, datetime, date, dotnet, extension-methods, fluent, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions</PackageTags>
         <PackageReleaseNotes>
           New Extensions Added:
-- string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition = true);
-- string AddToStart(this string text, string textToAdd, bool addSpaceafterAddition = true);
-- string ReplaceMultipleWithOne(this string source, string[] values, string value)
-- string Take(this string source, int characters, Position from = Position.Start);
-- double ToKB(this int number, DigitalStorage from = DigitalStorage.KB);
-- double ToMB(this int number, DigitalStorage from = DigitalStorage.MB);
-- double ToGB(this int number, DigitalStorage from = DigitalStorage.GB);
-- double ToTB(this int number, DigitalStorage from = DigitalStorage.TB);
-        </PackageReleaseNotes>
+- public static string DriveFreeSpace(this string driveLetter);
+- public static string DriveTotalSize(this string driveLetter);
+- public static string DriveFormat(this string driveLetter);
+- public static DriveType DriveType(this string driveLetter);
+- public static void DeleteFile(this string filePath);
+- public static void HideFile(this string filePath);
+- public static void ShowFile(this string filePath);
+- public static DateTime CreatedDate(this string filePath);
+- public static void CopyFile(this string filePath, string destination);
+- public static void MoveFile(this string filePath, string destination);
+- public static double FileSizeInKB(this string filePath);
+- public static double FileSizeInMB(this string filePath);
+
+          Fixes
+- Fix digital storage measurements.
+</PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/D-Diyare/FluentExtensions</PackageProjectUrl>
-        <Version>1.2</Version>
+        <Version>1.3</Version>
         <Copyright>Copyright © Diyare Abdulla 2021</Copyright>
         <Title>FluentExtensions</Title>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

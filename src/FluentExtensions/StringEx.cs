@@ -356,5 +356,188 @@ namespace FluentExtensions
 
             return result;
         }
+
+        /// <summary>
+        /// Gets the free space of the given drive in gigabytes.
+        /// </summary>
+        /// <param name="driveLetter">Drive letter only such as (c, d, e,...).</param>
+        /// <returns>The Type of the given drive.</returns>
+        public static string DriveFreeSpace(this string driveLetter)
+        {
+            var allDrives = DriveInfo.GetDrives();
+            double freeSpace = 0;
+            foreach (var drive in allDrives)
+            {
+                if (drive.Name.ToLower().Replace(@":\", "") != driveLetter.ToLower())
+                    continue;
+                var kb = (int)(drive.AvailableFreeSpace * 0.001);
+                freeSpace = kb.ToGB(DigitalStorage.KB);
+            }
+            return Math.Round(freeSpace, 3) + " GB";
+        }
+
+        /// <summary>
+        /// Gets the total size of the given drive in gigabytes.
+        /// </summary>
+        /// <param name="driveLetter">Drive letter only such as (c, d, e,...).</param>
+        /// <returns>The Type of the given drive.</returns>
+        public static string DriveTotalSize(this string driveLetter)
+        {
+            var allDrives = DriveInfo.GetDrives();
+            double freeSpace = 0;
+            foreach (var drive in allDrives)
+            {
+                if (drive.Name.ToLower().Replace(@":\", "") != driveLetter.ToLower())
+                    continue;
+                var kb = (int)(drive.TotalSize * 0.001);
+                freeSpace = kb.ToGB(DigitalStorage.KB);
+            }
+            return Math.Round(freeSpace, 3) + " GB";
+        }
+
+        /// <summary>
+        /// Gets the format of the given drive.
+        /// </summary>
+        /// <param name="driveLetter">Drive letter only such as (c, d, e,...).</param>
+        /// <returns>The format of the given drive.</returns>
+        public static string DriveFormat(this string driveLetter)
+        {
+            var allDrives = DriveInfo.GetDrives();
+            string driveFormat = default;
+            foreach (var drive in allDrives)
+            {
+                if (drive.Name.ToLower().Replace(@":\", "") != driveLetter.ToLower())
+                    continue;
+                driveFormat = drive.DriveFormat;
+            }
+            return driveFormat;
+        }
+
+        /// <summary>
+        /// Gets the type of the given drive.
+        /// </summary>
+        /// <param name="driveLetter">Drive letter only such as (c, d, e,...).</param>
+        /// <returns>The Type of the given drive.</returns>
+        public static DriveType DriveType(this string driveLetter)
+        {
+            var allDrives = DriveInfo.GetDrives();
+            DriveType type = default;
+            foreach (var drive in allDrives)
+            {
+                if (drive.Name.ToLower().Replace(@":\", "") != driveLetter.ToLower())
+                    continue;
+                type = drive.DriveType;
+            }
+            return type;
+        }
+
+        /// <summary>
+        /// Delete the given file from disk.
+        /// </summary>
+        /// <param name="filePath">File to delete.</param>
+        public static void DeleteFile(this string filePath)
+        {
+            if (!filePath.FileExists())
+                throw new FileNotFoundException("File Not Found!");
+
+            File.Delete(filePath);
+        }
+
+        /// <summary>
+        /// Hides the given file from disk.
+        /// </summary>
+        /// <param name="filePath">File to hide.</param>
+        public static void HideFile(this string filePath)
+        {
+            if (!filePath.FileExists())
+                throw new FileNotFoundException("File Not Found!");
+
+            File.SetAttributes(filePath, FileAttributes.Hidden);
+        }
+
+        /// <summary>
+        /// Shows the given file from disk (if it's already hidden).
+        /// </summary>
+        /// <param name="filePath">File to hide.</param>
+        public static void ShowFile(this string filePath)
+        {
+            if (!filePath.FileExists())
+                throw new FileNotFoundException("File Not Found!");
+
+            File.SetAttributes(filePath, FileAttributes.Normal);
+        }
+
+        /// <summary>
+        /// Gets the date and time when this given file created.
+        /// </summary>
+        /// <param name="filePath">File to check.</param>
+        /// <returns>The Date that this file got created in.</returns>
+        public static DateTime CreatedDate(this string filePath)
+        {
+            if (!filePath.FileExists())
+                throw new FileNotFoundException("File Not Found!");
+
+            return File.GetCreationTime(filePath);
+        }
+
+        /// <summary>
+        /// Copies the file to the given destination (overwrites it if it's already exist).
+        /// </summary>
+        /// <param name="filePath">File to copy.</param>
+        public static void CopyFile(this string filePath, string destination)
+        {
+            if (!filePath.FileExists())
+                throw new FileNotFoundException("File Not Found!");
+
+            if (destination.FileExists())
+                destination.DeleteFile();
+
+            File.Copy(filePath, destination, true);
+        }
+
+        /// <summary>
+        /// Moves the file to the given destination (overwrites it if it's already exist).
+        /// </summary>
+        /// <param name="filePath">File to copy.</param>
+        public static void MoveFile(this string filePath, string destination)
+        {
+            if (!filePath.FileExists())
+                throw new FileNotFoundException("File Not Found!");
+
+            if (destination.FileExists())
+                destination.DeleteFile();
+
+            File.Move(filePath, destination);
+        }
+
+        /// <summary>
+        /// Gets the file size in kilobytes.
+        /// </summary>
+        /// <param name="filePath">file path to get it's size.</param>
+        /// <returns>The Size of the given file in kilobytes.</returns>
+        public static double FileSizeInKB(this string filePath)
+        {
+            if (!filePath.FileExists())
+                throw new FileNotFoundException("File Not Found!");
+
+            var fileInfo = new FileInfo(filePath);
+
+            return fileInfo.Length / 1024;
+        }
+
+        /// <summary>
+        /// Gets the file size in megabytes.
+        /// </summary>
+        /// <param name="filePath">file path to get it's size.</param>
+        /// <returns>The Size of the given file in megabytes.</returns>
+        public static double FileSizeInMB(this string filePath)
+        {
+            var fileSizeInKB = filePath.FileSizeInKB();
+
+            var fileSizeInMB = fileSizeInKB / 1024;
+
+            return Math.Round(fileSizeInMB, 3, MidpointRounding.AwayFromZero);
+        }
+
     }
 }
