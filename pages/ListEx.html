@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
         referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" type="image/png" href="../assets/images/FluentExtensions.png" />
     <title>Fluent Extensions</title>
@@ -69,7 +70,7 @@
         <div class="ui segment">
             <div class="main ui container">
 
-                <h1 class="ui dividing header">
+                <h1 class="ui dividing header animate__animated animate__fadeIn">
                     List Extensions
                     <div class="sub header">
                         Extensions to numeric data types such as: int, double, decimal, byte...
@@ -78,7 +79,7 @@
 
                 <div class="ui basic segment">
 
-                    <h4 class="ui dividing header">
+                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
                         <p class="extension-title">ToImmutableList</p>
                         <p class="title-description">Changes a list from mutable (Changeable) to immutable(Not changeable).</p>
                         <pre>
@@ -88,7 +89,7 @@ IList<int> immutableList = list1.ToImmutableList(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header">
+                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
                         <p class="extension-title">ReplaceWith</p>
                         <p class="title-description">Replaces a list items with another ones items.</p>
                         <pre>
@@ -100,7 +101,7 @@ list2.ReplaceWith(list1);
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header">
+                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
                         <p class="extension-title">PickRandomItem</p>
                         <p class="title-description">Picks one item through the list randomly..</p>
                         <pre>
