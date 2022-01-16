@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace FluentExtensions
@@ -17,7 +18,8 @@ namespace FluentExtensions
         {
             if (sourceList == null)
                 throw new ArgumentNullException(nameof(sourceList));
-            var list = sourceList.ToList();
+
+            var list = sourceList.AsList();
             return list.AsReadOnly();
         }
 
@@ -33,13 +35,13 @@ namespace FluentExtensions
         {
             if (sourceList == null)
                 throw new ArgumentNullException(nameof(sourceList));
-            
-            if(sourceList.Any())
+
+            if (sourceList.Any())
                 sourceList.Clear();
-           
+
             foreach (var item in targetList)
                 sourceList.Add(item);
-           
+
             return sourceList;
         }
 
@@ -54,13 +56,26 @@ namespace FluentExtensions
         {
             if (sourceList == null)
                 throw new ArgumentNullException(nameof(sourceList));
-          
+
             if (!sourceList.Any())
                 throw new ArgumentNullException($"{nameof(sourceList)} is empty");
-           
+
             var randomize = new Random();
             return sourceList[randomize.Next(1, sourceList.Count)];
         }
-        
+
+        /// <summary>
+        /// Converts IEnumerable to list, if it is already a List it returns the list itself. 
+        /// </summary>
+        /// <param name="sourceList">IEnumerable to convert.</param>
+        /// <returns>List from IEnumerable.</returns>
+        public static IList<T> AsList<T>(IEnumerable<T> sourceList)
+        {
+            if (sourceList == null)
+                throw new ArgumentNullException(nameof(sourceList));
+
+            return sourceList is List<T> ? sourceList : sourceList.ToList();
+        }
+
     }
 }

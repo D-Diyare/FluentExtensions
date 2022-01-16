@@ -1,10 +1,11 @@
-﻿using FluentExtensions.Enumerators;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentExtensions.Enumerators;
 
 namespace FluentExtensions
 {
@@ -370,9 +371,10 @@ namespace FluentExtensions
             {
                 if (drive.Name.ToLower().Replace(@":\", "") != driveLetter.ToLower())
                     continue;
-                var kb = (int)(drive.AvailableFreeSpace * 0.001);
+                var kb = (int) (drive.AvailableFreeSpace * 0.001);
                 freeSpace = kb.ToGB(DigitalStorage.KB);
             }
+
             return Math.Round(freeSpace, 3) + " GB";
         }
 
@@ -389,9 +391,10 @@ namespace FluentExtensions
             {
                 if (drive.Name.ToLower().Replace(@":\", "") != driveLetter.ToLower())
                     continue;
-                var kb = (int)(drive.TotalSize * 0.001);
+                var kb = (int) (drive.TotalSize * 0.001);
                 freeSpace = kb.ToGB(DigitalStorage.KB);
             }
+
             return Math.Round(freeSpace, 3) + " GB";
         }
 
@@ -410,6 +413,7 @@ namespace FluentExtensions
                     continue;
                 driveFormat = drive.DriveFormat;
             }
+
             return driveFormat;
         }
 
@@ -428,6 +432,7 @@ namespace FluentExtensions
                     continue;
                 type = drive.DriveType;
             }
+
             return type;
         }
 
@@ -539,5 +544,54 @@ namespace FluentExtensions
             return Math.Round(fileSizeInMB, 3, MidpointRounding.AwayFromZero);
         }
 
+        /// <summary>
+        /// Joins string array into a single string separated via delimiter.
+        /// </summary>
+        /// <param name="texts">string array to join.</param>
+        /// <param name="delimiter">delimiter to join strings with (eg: , ).</param>
+        /// <returns>A Single string based on given array.</returns>
+        public static string Join(this IEnumerable<string> texts, string delimiter)
+        {
+            var str = new StringBuilder();
+            foreach (var text in texts)
+            {
+                str.Append($"{text}{delimiter}");
+            }
+
+            return str.ToString();
+        }
+
+        /// <summary>
+        /// Reads the file content as array of bytes.
+        /// </summary>
+        /// <param name="filePath">Path of the file to read.</param>
+        /// <returns>Byte array of the given file content.</returns>
+        public static byte[] ReadBytesFromDisk(this string filePath)
+        {
+            if (filePath.IsEmpty())
+                throw new Exception("The given path is empty");
+
+            return File.ReadAllBytes(filePath);
+        }
+
+        /// <summary>
+        /// Reads the file content as array of bytes asynchronously.
+        /// </summary>
+        /// <param name="filePath">Path of the file to read.</param>
+        /// <returns>Byte array of the given file content.</returns>
+        public static async Task<byte[]> ReadBytesFromDiskAsync(this string filePath)
+        {
+            if (filePath.IsEmpty())
+                throw new Exception("The given path is empty");
+
+            byte[] outputFile;
+            using (var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                outputFile = new byte[fs.Length];
+                await fs.ReadAsync(outputFile, 0, (int) fs.Length);
+            }
+
+            return outputFile;
+        }
     }
 }
