@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Bunch of useful extensions for .NET applications." />
-    <meta name="keywords" content="extension, datetime, date, dotnet, extension-methods, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
+    <meta name="description" content="A Bunch of useful extensions for .NET
+            applications." />
+    <meta name="keywords" content="extension, datetime, date, dotnet,
+            extension-methods, string-matching, stringextensions,
+            fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
     <meta content="Fluent Extensions" name="FluentExtensions" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
@@ -24,7 +27,7 @@
             <div class="ui large vertical menu">
                 <div class="item">
                     <a class="ui logo icon image" href="/">
-                        <img src="../assets/images/FluentExtensions.png" width="64" height="32">
+                        <img src="../assets/images/FluentExtensions.png" width="64" height="32" alt="logo">
                     </a>
                     <a href="../index.html"><b>Fluent Extensions</b></a>
                 </div>
@@ -38,14 +41,19 @@
                     <div class="header">Extensions</div>
                     <div class="menu">
 
+                        <a class="active item" href="">
+                                String Extensions
+                                <div class="ui label circular">42</div>
+                            </a>
+
+                        <a class="item" href="./BooleanEx.html">
+                                Boolean Extensions
+                                <div class="ui label circular">2</div>
+                            </a>
+
                         <a class="item" href="./NumericEx.html">
                                 Number Extensions
                                 <div class="ui label circular">30</div>
-                            </a>
-
-                        <a class="active item" href="">
-                                String Extensions
-                                <div class="ui label circular">40</div>
                             </a>
 
                         <a class="item" href="./DateTimeEx.html">
@@ -56,7 +64,7 @@
 
                         <a class="item" href="./ListEx.html">
                                 List Extensions
-                                <div class="ui label circular">3</div>
+                                <div class="ui label circular">5</div>
 
                             </a>
 
@@ -70,7 +78,8 @@
         <div class="ui segment">
             <div class="main ui container">
 
-                <h1 class="ui dividing header animate__animated animate__fadeIn">
+                <h1 class="ui dividing header animate__animated
+                        animate__fadeIn">
                     String Extensions
                     <div class="sub header">
                         Extensions to numeric data types such as: int, double, decimal, byte...
@@ -79,7 +88,8 @@
 
                 <div class="ui basic segment">
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsInt</p>
                         <p class="title-description">Determines whether the given string is Integer.</p>
                         <pre>
@@ -89,7 +99,8 @@ bool result = "Hello".IsInt(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsDouble</p>
                         <p class="title-description">Determines whether the given string is Double.</p>
                         <pre>
@@ -99,7 +110,8 @@ bool result = "Hello".IsDouble(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsDecimal</p>
                         <p class="title-description">Determines whether the given string is Decimal.</p>
                         <pre>
@@ -109,7 +121,8 @@ bool result = "Hello".IsDecimal(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsDate</p>
                         <p class="title-description">Determines whether the given string is Date.</p>
                         <pre>
@@ -119,7 +132,8 @@ bool result = "Hello".IsDate(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsBoolean</p>
                         <p class="title-description">Determines whether the given string is Boolean.</p>
                         <pre>
@@ -129,7 +143,8 @@ bool result = "Hello".IsBoolean(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToBoolean</p>
                         <p class="title-description">Converts string type (True | False) to boolean. </p>
                         <pre>
@@ -139,7 +154,8 @@ bool result = "false".ToBoolean(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">GetInBetween</p>
                         <p class="title-description">Determines whether the given string is Date.</p>
                         <p class="title-description">Credits: <a href="https://stackoverflow.com/a/28723216/12352466">https://stackoverflow.com/a/28723216/12352466</a></p>
@@ -150,7 +166,8 @@ string result = text.GetInBetween("This", "FluentExtensions"); // " Is " </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToTitleCase</p>
                         <p class="title-description">Converts given text into title case text.</p>
                         <pre>
@@ -160,7 +177,8 @@ string result = "hello".ToTitleCase(); // Hello </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToTitleCase</p>
                         <p class="title-description">Converts given text into title case text.</p>
                         <pre>
@@ -170,7 +188,8 @@ string result = "hello".ToTitleCase(culture); // Hello </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsContainDigits</p>
                         <p class="title-description">Determines whether the given string contains digit(s).</p>
                         <pre>
@@ -180,7 +199,8 @@ bool result = "hello".IsContainDigits(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsContainLetters</p>
                         <p class="title-description">Determines whether the given string contains letter(s).</p>
                         <pre>
@@ -190,7 +210,8 @@ bool result = "53".IsContainLetters(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">AreAllDigits</p>
                         <p class="title-description">Determines whether all characters of the given text are digits.</p>
                         <pre>
@@ -200,7 +221,8 @@ bool result = "53".AreAllDigits(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">AreAllLetters</p>
                         <p class="title-description">Determines whether all characters of the given text are letters.</p>
                         <pre>
@@ -210,7 +232,8 @@ bool result = "Hello".AreAllLetters(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">FromBase64ToByteArray</p>
                         <p class="title-description">Converts back base64 string to byte array.</p>
                         <pre>
@@ -219,25 +242,30 @@ bool result = "Hello".AreAllLetters(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">GetBytes</p>
-                        <p class="title-description">Converts string to byte array.</p>
+                        <p class="title-description">Converts string to byte array.
+                        </p>
                         <pre>
                         <code class="language-csharp">byte[] GetBytes(this string source);</code><span class="example">Example:</span>
                         <code class="language-csharp">byte[] result = "Hello World!".GetBytes();</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">GetBytes</p>
-                        <p class="title-description">Converts string to byte array.</p>
+                        <p class="title-description">Converts string to byte array.
+                        </p>
                         <pre>
                         <code class="language-csharp">byte[] GetBytes(this string source, EncodingType encodingType);</code><span class="example">Example:</span>
                         <code class="language-csharp">byte[] result = "Hello World!".GetBytes(EncodingType.Unicode);</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsEmpty</p>
                         <p class="title-description">Determines whether the given text is null or whitespace or empty.</p>
                         <pre>
@@ -248,7 +276,8 @@ bool result = "".IsEmpty(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">GetFileExtension</p>
                         <p class="title-description">Gets the extension of the file.</p>
                         <pre>
@@ -257,7 +286,8 @@ bool result = "".IsEmpty(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">FileExists</p>
                         <p class="title-description">Determines whether the file exists.</p>
                         <pre>
@@ -266,7 +296,8 @@ bool result = "".IsEmpty(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToFileInDisk</p>
                         <p class="title-description">Create a text file based on the given text.</p>
                         <pre>
@@ -275,7 +306,8 @@ bool result = "".IsEmpty(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToFileInDiskAsync</p>
                         <p class="title-description">Create a text file asynchronously based on the given text.</p>
                         <pre>
@@ -284,7 +316,8 @@ bool result = "".IsEmpty(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ReadFromDisk</p>
                         <p class="title-description">Gets the content of the text file.</p>
                         <pre>
@@ -293,7 +326,8 @@ bool result = "".IsEmpty(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ReadFromDiskAsync</p>
                         <p class="title-description">Gets the content of the text file asynchronously.</p>
                         <pre>
@@ -302,7 +336,8 @@ bool result = "".IsEmpty(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">AddToEnd</p>
                         <p class="title-description">Adds text to end of another text.</p>
                         <pre>
@@ -312,7 +347,8 @@ string result = "Hello".AddToEnd("World!", false); // HelloWorld!</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">AddToStart</p>
                         <p class="title-description">Adds text to start of another text.</p>
                         <pre>
@@ -322,7 +358,8 @@ string result = "World!".AddToStart("Hello", false); // HelloWorld!</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">Take</p>
                         <p class="title-description">Gets portion of string based on given characters and position to get. </p>
                         <pre>
@@ -332,7 +369,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">ReplaceMultipleWithOne</p>
                         <p class="title-description">Gets portion of string based on given characters and position to get. </p>
                         <pre>
@@ -341,7 +379,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">DriveFreeSpace</p>
                         <p class="title-description">Gets the free space of the given drive in gigabytes.</p>
                         <pre>
@@ -350,7 +389,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">DriveTotalSize</p>
                         <p class="title-description">Gets the total size of the given drive in gigabytes.</p>
                         <pre>
@@ -359,7 +399,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">DriveFormat</p>
                         <p class="title-description">Gets the format of the given drive.</p>
                         <pre>
@@ -368,7 +409,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">DriveType</p>
                         <p class="title-description">Gets the type of the given drive.</p>
                         <pre>
@@ -377,7 +419,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">DeleteFile</p>
                         <p class="title-description">Delete the given file from disk.</p>
                         <pre>
@@ -386,7 +429,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">HideFile</p>
                         <p class="title-description">Hides the given file from disk.</p>
                         <pre>
@@ -395,7 +439,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">ShowFile</p>
                         <p class="title-description">Shows the given file from disk (if it's already hidden).</p>
                         <pre>
@@ -404,7 +449,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">CreatedDate</p>
                         <p class="title-description">Gets the date and time when this given file created.</p>
                         <pre>
@@ -413,7 +459,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">CopyFile</p>
                         <p class="title-description">Copies the file to the given destination (overwrites it if it's already exist).</p>
                         <pre>
@@ -422,7 +469,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">MoveFile</p>
                         <p class="title-description">Moves the file to the given destination (overwrites it if it's already exist).</p>
                         <pre>
@@ -431,7 +479,8 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">FileSizeInKB</p>
                         <p class="title-description">Gets the file size in kilobytes.</p>
                         <pre>
@@ -440,12 +489,33 @@ string result = "Hello From FluentExtensions".Take(5); // Hello</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
                         <p class="extension-title">FileSizeInMB</p>
                         <p class="title-description">Gets the file size in megabytes.</p>
                         <pre>
                         <code class="language-csharp">static double FileSizeInMB(this string filePath)</code><span class="example">Example:</span>
                         <code class="language-csharp">double result = "C:\\file.txt".FileSizeInMB();</code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
+                        <p class="extension-title">ReadBytesFromDisk</p>
+                        <p class="title-description">Reads the file content as array of bytes.</p>
+                        <pre>
+                        <code class="language-csharp">byte[] ReadBytesFromDisk(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">byte[] result = "C:\\file.exe".ReadFromDisk(); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header animate__animated
+                                animate__fadeInUp">
+                        <p class="extension-title">ReadBytesFromDiskAsync</p>
+                        <p class="title-description">Reads the file content as array of bytes asynchronously.</p>
+                        <pre>
+                        <code class="language-csharp">Task<byte[]> ReadBytesFromDiskAsync(this string filePath);</code><span class="example">Example:</span>
+                        <code class="language-csharp">byte[] result = await "C:\\file.exe".ReadBytesFromDiskAsync();</code>
                     </pre>
                     </h4>
 

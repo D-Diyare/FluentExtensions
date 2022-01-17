@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Bunch of useful extensions for .NET applications." />
-    <meta name="keywords" content="extension, datetime, date, dotnet, extension-methods, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
+    <meta name="description" content="A Bunch of useful extensions for .NET
+            applications." />
+    <meta name="keywords" content="extension, datetime, date, dotnet,
+            extension-methods, string-matching, stringextensions,
+            fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
     <meta content="Fluent Extensions" name="FluentExtensions" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
@@ -24,7 +27,7 @@
             <div class="ui large vertical menu">
                 <div class="item">
                     <a class="ui logo icon image" href="/">
-                        <img src="../assets/images/FluentExtensions.png" width="64" height="32">
+                        <img src="../assets/images/FluentExtensions.png" width="64" height="32" alt="logo">
                     </a>
                     <a href="../index.html"><b>Fluent Extensions</b></a>
                 </div>
@@ -43,9 +46,14 @@
                                 <div class="ui label circular">30</div>
                             </a>
 
+                        <a class="active item" href="./BooleanEx.html">
+                                Boolean Extensions
+                                <div class="ui label circular">2</div>
+                            </a>
+
                         <a class="item" href="./StringEx.html">
                                 String Extensions
-                                <div class="ui label circular">40</div>
+                                <div class="ui label circular">42</div>
                             </a>
 
                         <a class="item" href="./DateTimeEx.html">
@@ -56,7 +64,7 @@
 
                         <a class="item" href="./ListEx.html">
                                 List Extensions
-                                <div class="ui label circular">3</div>
+                                <div class="ui label circular">5</div>
 
                             </a>
 
@@ -70,7 +78,8 @@
         <div class="ui segment">
             <div class="main ui container">
 
-                <h1 class="ui dividing header animate__animated animate__fadeIn">
+                <h1 class="ui dividing header animate__animated
+                        animate__fadeIn">
                     Number Extensions
                     <div class="sub header">
                         Extensions to numeric data types such as: int, double, decimal, byte...
@@ -79,7 +88,8 @@
 
                 <div class="ui basic segment">
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsEven</p>
                         <p class="title-description">Determines whether the given number is even.</p>
                         <pre>
@@ -89,7 +99,8 @@ bool result = 1.IsEven(); // false </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsOdd</p>
                         <p class="title-description">Determines whether the given number is odd.</p>
                         <pre>
@@ -99,7 +110,8 @@ bool result = 1.IsOdd(); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsGreaterThan</p>
                         <p class="title-description">Determines whether the current number is greater than the target one.</p>
                         <pre>
@@ -109,7 +121,8 @@ bool result = 3.IsGreaterThan(1); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsLessThan</p>
                         <p class="title-description">Determines whether the current number is less than the target one.</p>
                         <pre>
@@ -119,7 +132,8 @@ bool result = 3.IsLessThan(4); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsEqualTo</p>
                         <p class="title-description">Determines whether the current number is equal to the target one.</p>
                         <pre>
@@ -129,7 +143,8 @@ bool result = 3.IsEqualTo(3); // true </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">DaysAgo</p>
                         <p class="title-description">Gets the datetime in past from given number of days.</p>
                         <pre>
@@ -139,7 +154,8 @@ DateTime result = 3.DaysAgo(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">DaysAfter</p>
                         <p class="title-description">Gets the datetime in future from given number of days.</p>
                         <pre>
@@ -149,7 +165,8 @@ DateTime result = 3.DaysAfter(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">WeeksAgo</p>
                         <p class="title-description">Gets the datetime in past from given number of weeks.</p>
                         <pre>
@@ -159,7 +176,8 @@ DateTime result = 3.WeeksAgo(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">WeeksAfter</p>
                         <p class="title-description">Gets the datetime in future from given number of weeks.</p>
                         <pre>
@@ -169,7 +187,8 @@ DateTime result = 3.WeeksAfter(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">MonthsAgo</p>
                         <p class="title-description">Gets the datetime in past from given number of months.</p>
                         <pre>
@@ -179,7 +198,8 @@ DateTime result = 3.MonthsAgo(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">MonthsAfter</p>
                         <p class="title-description">Gets the datetime in future from given number of months.</p>
                         <pre>
@@ -189,7 +209,8 @@ DateTime result = 3.MonthsAfter(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">YearsAgo</p>
                         <p class="title-description">Gets the datetime in past from given number of years.</p>
                         <pre>
@@ -199,7 +220,8 @@ DateTime result = 3.YearsAgo(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">YearsAfter</p>
                         <p class="title-description">Gets the datetime in future from given number of years.</p>
                         <pre>
@@ -209,7 +231,8 @@ DateTime result = 3.YearsAfter(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">Days</p>
                         <p class="title-description">Converts the given number into days.</p>
                         <pre>
@@ -219,7 +242,8 @@ DateTime result = 3.Days(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsLeapYear</p>
                         <p class="title-description">Determines whether the given year is a leap year.</p>
                         <pre>
@@ -229,7 +253,8 @@ bool result = 2021.IsLeapYear(); // false</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">PreviousLeapYear</p>
                         <p class="title-description">Gets the previous leap year based on the given year.</p>
                         <pre>
@@ -239,7 +264,8 @@ DateTime result = 2020.PreviousLeapYear(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">NextLeapYear</p>
                         <p class="title-description">Gets the next leap year based on the given year.</p>
                         <pre>
@@ -249,7 +275,8 @@ DateTime result = 2021.NextLeapYear(); // 2024 </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">FromByeArrayToBase64</p>
                         <p class="title-description">Converts byte array to base64 string.</p>
                         <pre>
@@ -259,7 +286,8 @@ string result = byteArray.FromByeArrayToBase64(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">SeparateThousandsByComma</p>
                         <p class="title-description">Separates every 3 number by comma.</p>
                         <pre>
@@ -269,7 +297,8 @@ string result = 1589324.SeparateThousandsByComma(); // "1,589,324" </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">SeparateThousandsByComma</p>
                         <p class="title-description">Separates every 3 number by comma.</p>
                         <pre>
@@ -279,9 +308,11 @@ string result = 1589324.SeparateThousandsByComma(culture); // "1,589,324" </code
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">RandomDigits</p>
-                        <p class="title-description">Generating Random Numbers.</p>
+                        <p class="title-description">Generating Random Numbers.
+                        </p>
                         <pre>
                         <code class="language-csharp">string RandomDigits(this int length);</code><span class="example">Example:</span>
                         <code class="language-csharp">string result = 4.RandomDigits();
@@ -289,9 +320,11 @@ string result = 6.RandomDigits();  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">GenerateRandomString</p>
-                        <p class="title-description">Generating Random Strings.</p>
+                        <p class="title-description">Generating Random Strings.
+                        </p>
                         <pre>
                         <code class="language-csharp">string GenerateRandomString(this int length, bool isUpperCase = false, bool containNumbers = false);</code><span class="example">Example:</span>
                         <code class="language-csharp">string result = 4.GenerateRandomString();
@@ -299,7 +332,8 @@ string result = 6.GenerateRandomString(isUpperCase: true, containNumbers: true);
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToKB</p>
                         <p class="title-description">Converts given number to kilobytes.</p>
                         <pre>
@@ -309,7 +343,8 @@ double result = 6.ToKB(DigitalStorage.GB);  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToMB</p>
                         <p class="title-description">Converts given number to megabytes.</p>
                         <pre>
@@ -319,7 +354,8 @@ double result = 6.ToMB(DigitalStorage.GB);  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToGB</p>
                         <p class="title-description">Converts given number to gigabytes.</p>
                         <pre>
@@ -329,7 +365,8 @@ double result = 6.ToGB(DigitalStorage.TB);  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToTB</p>
                         <p class="title-description">Converts given number to terabytes.</p>
                         <pre>
@@ -339,7 +376,8 @@ double result = 6.ToTB(DigitalStorage.GB);  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToKB</p>
                         <p class="title-description">Converts given number to kilobytes.</p>
                         <pre>
@@ -349,7 +387,8 @@ double result = 6.ToKB(DigitalStorage.GB);  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToMB</p>
                         <p class="title-description">Converts given number to megabytes.</p>
                         <pre>
@@ -359,7 +398,8 @@ double result = 6.ToMB(DigitalStorage.GB);  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToGB</p>
                         <p class="title-description">Converts given number to gigabytes.</p>
                         <pre>
@@ -369,7 +409,8 @@ double result = 6.ToGB(DigitalStorage.TB);  </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToTB</p>
                         <p class="title-description">Converts given number to terabytes.</p>
                         <pre>

@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Bunch of useful extensions for .NET applications." />
-    <meta name="keywords" content="extension, datetime, date, dotnet, extension-methods, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
+    <meta name="description" content="A Bunch of useful extensions for .NET
+            applications." />
+    <meta name="keywords" content="extension, datetime, date, dotnet,
+            extension-methods, string-matching, stringextensions,
+            fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
     <meta content="Fluent Extensions" name="FluentExtensions" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
@@ -24,7 +27,7 @@
             <div class="ui large vertical menu">
                 <div class="item">
                     <a class="ui logo icon image" href="/">
-                        <img src="../assets/images/FluentExtensions.png" width="64" height="32">
+                        <img src="../assets/images/FluentExtensions.png" width="64" height="32" alt="logo">
                     </a>
                     <a href="../index.html"><b>Fluent Extensions</b></a>
                 </div>
@@ -38,6 +41,17 @@
                     <div class="header">Extensions</div>
                     <div class="menu">
 
+                        <a class="active item" href="">
+                                List Extensions
+                                <div class="ui label circular">5</div>
+
+                            </a>
+
+                        <a class="item" href="./BooleanEx.html">
+                                Boolean Extensions
+                                <div class="ui label circular">2</div>
+                            </a>
+
                         <a class="item" href="./NumericEx.html">
                                 Number Extensions
                                 <div class="ui label circular">30</div>
@@ -45,18 +59,12 @@
 
                         <a class="item" href="./StringEx.html">
                                 String Extensions
-                                <div class="ui label circular">40</div>
+                                <div class="ui label circular">42</div>
                             </a>
 
                         <a class="item" href="./DateTimeEx.html">
                                 DateTime Extensions
                                 <div class="ui label circular">30</div>
-
-                            </a>
-
-                        <a class="active item" href="">
-                                List Extensions
-                                <div class="ui label circular">3</div>
 
                             </a>
 
@@ -70,18 +78,21 @@
         <div class="ui segment">
             <div class="main ui container">
 
-                <h1 class="ui dividing header animate__animated animate__fadeIn">
+                <h1 class="ui dividing header animate__animated
+                        animate__fadeIn">
                     List Extensions
                     <div class="sub header">
-                        Extensions to numeric data types such as: int, double, decimal, byte...
+                        Extensions to lists...
                     </div>
                 </h1>
 
                 <div class="ui basic segment">
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ToImmutableList</p>
-                        <p class="title-description">Changes a list from mutable (Changeable) to immutable(Not changeable).</p>
+                        <p class="title-description">Changes a list from mutable (Changeable) to immutable(Not changeable).
+                        </p>
                         <pre>
                         <code class="language-csharp">IEnumerable<T> ToImmutableList<T>(this IEnumerable<T> sourceList);</code><span class="example">Example:</span>
                         <code class="language-csharp">IList<int> list1 = new List<int>{2, 4, 6, 8};   
@@ -89,7 +100,9 @@ IList<int> immutableList = list1.ToImmutableList(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header
+                                                    animate__animated
+                                                    animate__fadeInUp">
                         <p class="extension-title">ReplaceWith</p>
                         <p class="title-description">Replaces a list items with another ones items.</p>
                         <pre>
@@ -100,41 +113,52 @@ list2.ReplaceWith(list1);
 </code>
                     </pre>
                     </h4>
-
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui
+                                                                                    dividing
+                                                                                    header
+                                                                                    animate__animated
+                                                                                    animate__fadeInUp">
                         <p class="extension-title">PickRandomItem</p>
-                        <p class="title-description">Picks one item through the list randomly..</p>
+                        <p class="title-description">Picks one item through the list randomly..
+                        </p>
                         <pre>
                         <code class="language-csharp">T PickRandomItem<T>(this IList<T> sourceList);</code><span class="example">Example:</span>
                         <code class="language-csharp">IList<int> list1 = new List<int>{2, 4, 6, 8};   
 int randomItem = list1.PickRandomItem(); </code>
                     </pre>
                     </h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <h4 class="ui
+                                                                                                    dividing
+                                                                                                    header
+                                                                                                    animate__animated
+                                                                                                    animate__fadeInUp">
+                        <p class="extension-title">Join</p>
+                        <p class="title-description">Joins string array into a single string separated via delimiter.
+                        </p>
+                        <pre>
+                        <code class="language-csharp">string Join(this IEnumerable<string> texts, string delimiter);</code><span class="example">Example:</span>
+                        <code class="language-csharp">string[] texts = new string[]{"one", "two", "three"};   
+string result = texts.Join(","); // "one,two,three"</code>
+                    </pre>
+                    </h4>
+                    <h4 class="ui
+                                                                                                        dividing
+                                                                                                        header
+                                                                                                        animate__animated
+                                                                                                        animate__fadeInUp">
+                        <p class="extension-title">AsList</p>
+                        <p class="title-description">Converts IEnumerable to list, if it is already a List it returns the list itself.
+                        </p>
+                        <pre>
+                        <code class="language-csharp">IList<T> AsList<T>(IEnumerable<T> sourceList);</code><span class="example">Example:</span>
+                        <code class="language-csharp">IEnumerable<T> collection = ...;   
+IList<T> result = collection.AsList(); // "one,two,three"</code>
+                    </pre>
+                    </h4>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
     </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>

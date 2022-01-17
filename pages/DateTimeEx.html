@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Bunch of useful extensions for .NET applications." />
-    <meta name="keywords" content="extension, datetime, date, dotnet, extension-methods, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
+    <meta name="description" content="A Bunch of useful extensions for .NET
+            applications." />
+    <meta name="keywords" content="extension, datetime, date, dotnet,
+            extension-methods, string-matching, stringextensions,
+            fluentextension, fluentextensions, numericxtensions, .net, dotnet" />
     <meta content="Fluent Extensions" name="FluentExtensions" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous"
@@ -24,7 +27,7 @@
             <div class="ui large vertical menu">
                 <div class="item">
                     <a class="ui logo icon image" href="/">
-                        <img src="../assets/images/FluentExtensions.png" width="64" height="32">
+                        <img src="../assets/images/FluentExtensions.png" width="64" height="32" alt="logo">
                     </a>
                     <a href="../index.html"><b>Fluent Extensions</b></a>
                 </div>
@@ -38,6 +41,17 @@
                     <div class="header">Extensions</div>
                     <div class="menu">
 
+                        <a class="active item" href="">
+                                DateTime Extensions
+                                <div class="ui label circular">30</div>
+
+                            </a>
+
+                        <a class="item" href="./BooleanEx.html">
+                                Boolean Extensions
+                                <div class="ui label circular">2</div>
+                            </a>
+
                         <a class="item" href="./NumericEx.html">
                                 Number Extensions
                                 <div class="ui label circular">30</div>
@@ -48,15 +62,9 @@
                                 <div class="ui label circular">40</div>
                             </a>
 
-                        <a class="active item" href="">
-                                DateTime Extensions
-                                <div class="ui label circular">30</div>
-
-                            </a>
-
                         <a class="item" href="./ListEx.html">
                                 List Extensions
-                                <div class="ui label circular">3</div>
+                                <div class="ui label circular">5</div>
 
                             </a>
 
@@ -70,7 +78,8 @@
         <div class="ui segment">
             <div class="main ui container">
 
-                <h1 class="ui dividing header animate__animated animate__fadeIn">
+                <h1 class="ui dividing header animate__animated
+                        animate__fadeIn">
                     DateTime Extensions
                     <div class="sub header">
                         Extensions to numeric data types such as: int, double, decimal, byte...
@@ -79,9 +88,11 @@
 
                 <div class="ui basic segment">
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">Tomorrow</p>
-                        <p class="title-description">Gets a day after given date.</p>
+                        <p class="title-description">Gets a day after given date.
+                        </p>
                         <pre>
                         <code class="language-csharp">DateTime Tomorrow(this DateTime current);</code><span class="example">Example:</span>
                         <code class="language-csharp">DateTime result = DateTime.Now.Tomorrow();  
@@ -89,9 +100,11 @@ DateTime result = new DateTime(1943, 7, 23).Tomorrow(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">Yesterday</p>
-                        <p class="title-description">Gets a day before given date.</p>
+                        <p class="title-description">Gets a day before given date.
+                        </p>
                         <pre>
                         <code class="language-csharp">DateTime Yesterday(this DateTime current);</code><span class="example">Example:</span>
                         <code class="language-csharp">DateTime result = DateTime.Now.Yesterday();  
@@ -99,25 +112,30 @@ DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">LastHour</p>
-                        <p class="title-description">Gets a day before given date.</p>
+                        <p class="title-description">Gets a day before given date.
+                        </p>
                         <pre>
                         <code class="language-csharp">DateTime LastHour(this DateTime current)</code><span class="example">Example:</span>
                         <code class="language-csharp">DateTime result = DateTime.Now.LastHour();</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">NextHour</p>
-                        <p class="title-description">Gets a day after given date.</p>
+                        <p class="title-description">Gets a day after given date.
+                        </p>
                         <pre>
                         <code class="language-csharp">DateTime NextHour(this DateTime current);</code><span class="example">Example:</span>
                         <code class="language-csharp">DateTime result = DateTime.Now.NextHour();</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">LastWeek</p>
                         <p class="title-description">Gets a week before the given date.</p>
                         <pre>
@@ -126,7 +144,8 @@ DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">NextWeek</p>
                         <p class="title-description">Gets a week after the given date.</p>
                         <pre>
@@ -135,7 +154,8 @@ DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">LastMonth</p>
                         <p class="title-description">Gets a month before the given date.</p>
                         <pre>
@@ -144,7 +164,8 @@ DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">NextMonth</p>
                         <p class="title-description">Gets a month after the given date.</p>
                         <pre>
@@ -153,7 +174,8 @@ DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">LastYear</p>
                         <p class="title-description">Gets a year before the given date.</p>
                         <pre>
@@ -162,7 +184,8 @@ DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">NextYear</p>
                         <p class="title-description">Gets a year after the given date.</p>
                         <pre>
@@ -171,7 +194,8 @@ DateTime result = new DateTime(1943, 7, 23).Yesterday(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">DaysAgo</p>
                         <p class="title-description">Gets the number of days prior to the given date.</p>
                         <pre>
@@ -181,7 +205,8 @@ DateTime result = new DateTime(1943, 7, 23).DaysAgo(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">DaysAfter</p>
                         <p class="title-description">Gets the number of days after to the given date.</p>
                         <pre>
@@ -191,7 +216,8 @@ DateTime result = new DateTime(1943, 7, 23).DaysAfter(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">WeeksAgo</p>
                         <p class="title-description">Gets the number of weeks prior to the given date.</p>
                         <pre>
@@ -201,7 +227,8 @@ DateTime result = new DateTime(1943, 7, 23).WeeksAgo(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">WeeksAfter</p>
                         <p class="title-description">Gets the number of weeks after to the given date.</p>
                         <pre>
@@ -211,7 +238,8 @@ DateTime result = new DateTime(1943, 7, 23).WeeksAfter(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">MonthsAgo</p>
                         <p class="title-description">Gets the number of months prior to the given date.</p>
                         <pre>
@@ -221,7 +249,8 @@ DateTime result = new DateTime(1943, 7, 23).MonthsAgo(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">MonthsAfter</p>
                         <p class="title-description">Gets the number of months after to the given date.</p>
                         <pre>
@@ -231,7 +260,8 @@ DateTime result = new DateTime(1943, 7, 23).MonthsAfter(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">YearsAgo</p>
                         <p class="title-description">Gets the number of years prior to the given date.</p>
                         <pre>
@@ -241,7 +271,8 @@ DateTime result = new DateTime(1943, 7, 23).YearsAgo(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">YearsAfter</p>
                         <p class="title-description">Gets the number of years after to the given date.</p>
                         <pre>
@@ -251,9 +282,11 @@ DateTime result = new DateTime(1943, 7, 23).YearsAfter(13); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">FirstDayOfMonth</p>
-                        <p class="title-description">Gets the first day of month.</p>
+                        <p class="title-description">Gets the first day of month.
+                        </p>
                         <pre>
                         <code class="language-csharp">DateTime FirstDayOfMonth(this DateTime date);</code><span class="example">Example:</span>
                         <code class="language-csharp">DateTime result = DateTime.Now.FirstDayOfMonth();  
@@ -261,9 +294,11 @@ DateTime result = new DateTime(1943, 7, 23).FirstDayOfMonth(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">LastDayOfMonth</p>
-                        <p class="title-description">Gets the last day of month.</p>
+                        <p class="title-description">Gets the last day of month.
+                        </p>
                         <pre>
                         <code class="language-csharp">DateTime LastDayOfMonth(this DateTime date);</code><span class="example">Example:</span>
                         <code class="language-csharp">DateTime result = DateTime.Now.LastDayOfMonth();  
@@ -271,7 +306,8 @@ DateTime result = new DateTime(1943, 7, 23).LastDayOfMonth(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">DaysLeft</p>
                         <p class="title-description">Gets the number of days left to the target date.</p>
                         <pre>
@@ -281,7 +317,8 @@ DateTime result = DateTime.Now.DaysLeft(date); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">DaysInMonth</p>
                         <p class="title-description">Gets the number of the days of the given date month.</p>
                         <pre>
@@ -291,7 +328,8 @@ int result = date.DaysInMonth(date); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsBetween</p>
                         <p class="title-description">Determines whether the given date is between the two given dates.</p>
                         <pre>
@@ -302,7 +340,8 @@ bool result = DateTime.Now.IsBetween(date, date2); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsBefore</p>
                         <p class="title-description">Determines whether the given date is before the target one.</p>
                         <pre>
@@ -312,7 +351,8 @@ bool result = DateTime.Now.IsBefore(date); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsAfter</p>
                         <p class="title-description">Determines whether the given date is after the target one.</p>
                         <pre>
@@ -322,7 +362,8 @@ bool result = DateTime.Now.IsAfter(date); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">IsYearLeap</p>
                         <p class="title-description">Determines whether the given year is a leap year.</p>
                         <pre>
@@ -332,7 +373,8 @@ bool result = date.IsYearLeap(); // false</code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">PreviousLeapYear</p>
                         <p class="title-description">Gets the previous leap year based on the given year.</p>
                         <pre>
@@ -342,7 +384,8 @@ DateTime result = date.PreviousLeapYear(); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">NextLeapYear</p>
                         <p class="title-description">Gets the next leap year based on the given year.</p>
                         <pre>
@@ -352,7 +395,8 @@ DateTime result = date.NextLeapYear(); // 2024 </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">GetAge</p>
                         <p class="title-description">Calculates age based on given date.</p>
                         <pre>
@@ -362,7 +406,8 @@ int result = date.GetAge(); // 67 (According to the current date "2021, Septembe
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header animate__animated animate__fadeInUp">
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">DayName</p>
                         <p class="title-description">Gets the name of the given date time.</p>
                         <pre>
