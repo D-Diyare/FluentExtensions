@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -542,23 +541,6 @@ namespace FluentExtensions
             var fileSizeInMB = fileSizeInKB / 1024;
 
             return Math.Round(fileSizeInMB, 3, MidpointRounding.AwayFromZero);
-        }
-
-        /// <summary>
-        /// Joins string array into a single string separated via delimiter.
-        /// </summary>
-        /// <param name="texts">string array to join.</param>
-        /// <param name="delimiter">delimiter to join strings with (eg: , ).</param>
-        /// <returns>A Single string based on given array.</returns>
-        public static string Join(this IEnumerable<string> texts, string delimiter)
-        {
-            var str = new StringBuilder();
-            foreach (var text in texts)
-            {
-                str.Append($"{text}{delimiter}");
-            }
-
-            return str.ToString();
         }
 
         /// <summary>

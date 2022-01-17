@@ -9,26 +9,9 @@
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>extension, datetime, date, dotnet, extension-methods, fluent, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions</PackageTags>
-        <PackageReleaseNotes>
-          New Extensions Added:
-- public static string DriveFreeSpace(this string driveLetter);
-- public static string DriveTotalSize(this string driveLetter);
-- public static string DriveFormat(this string driveLetter);
-- public static DriveType DriveType(this string driveLetter);
-- public static void DeleteFile(this string filePath);
-- public static void HideFile(this string filePath);
-- public static void ShowFile(this string filePath);
-- public static DateTime CreatedDate(this string filePath);
-- public static void CopyFile(this string filePath, string destination);
-- public static void MoveFile(this string filePath, string destination);
-- public static double FileSizeInKB(this string filePath);
-- public static double FileSizeInMB(this string filePath);
-
-          Fixes
-- Fix digital storage measurements.
-</PackageReleaseNotes>
+        <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/D-Diyare/FluentExtensions</PackageProjectUrl>
-        <Version>1.3</Version>
+        <Version>1.4</Version>
         <Copyright>Copyright © Diyare Abdulla 2021</Copyright>
         <Title>FluentExtensions</Title>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

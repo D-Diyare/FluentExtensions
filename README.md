@@ -6,6 +6,7 @@
 <br/>
 
 # FluentExtensions
+
 Fluent Extensions is a set of more than 100 .NET extensions, it especially made for helping developers to focus on the main tasks rather than get distracted by writing the same code again and again for simple actions, FluentExtensions akso increases readability.
 
 ### Install FluentExtensions via NuGet
@@ -20,9 +21,23 @@ PM> Install-Package FluentExtensions.NET
 ```
 
 ### Documentations
+
 > [Docs](https://d-diyare.github.io/FluentExtensions/)
 
 ### Extensions
+
+#### Extensions to Numbers
+
+```c#
+// Converts boolean value to either "yes" or "No".
+string ToYesNo(this bool source);
+
+// Executes an action while the given boolean value is equal to target value.
+void DoOn(this bool source, bool result, Action execute);
+
+
+
+```
 
 #### Extensions to Numbers
 
@@ -148,7 +163,7 @@ string ToTitleCase(this string source);
 // Converts given text into title case text.
 string ToTitleCase(this string source, CultureInfo culture);
 
-// Converts string type (True | False) to boolean. 
+// Converts string type (True | False) to boolean.
 bool ToBoolean(this string source);
 
 // Determines whether the given string contains digit(s).
@@ -199,7 +214,7 @@ string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition 
 // Adds text to start of another text.
 string AddToStart(this string text, string textToAdd, bool addSpaceAfterAddition = true);
 
-// Gets portion of string based on given characters and position to get. 
+// Gets portion of string based on given characters and position to get.
 string Take(this string source, int characters, Position from = Position.Start);
 
 // Replaces multiple values inside a string with one value.
@@ -244,6 +259,11 @@ double FileSizeInKB(this string filePath);
 // Gets the file size in megabytes.
 double FileSizeInMB(this string filePath);
 
+// Reads the file content as array of bytes.
+byte[] ReadBytesFromDisk(this string filePath);
+
+// Reads the file content as array of bytes asynchronously.
+Task<byte[]> ReadBytesFromDiskAsync(this string filePath)
 
 ```
 
@@ -352,4 +372,10 @@ static IEnumerable<T> ReplaceWith<T>(this IList<T> sourceList, IEnumerable<T> ta
 
 // Picks one item through the list randomly.
 T PickRandomItem<T>(this IList<T> sourceList);
+
+// Joins string array into a single string separated via delimiter.
+string Join(this IEnumerable<string> texts, string delimiter);
+
+// Converts IEnumerable to list, if it is already a List it returns the list itself.
+IList<T> AsList<T>(IEnumerable<T> sourceList);
 ```
