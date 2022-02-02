@@ -26,7 +26,7 @@ PM> Install-Package FluentExtensions.NET
 
 ### Extensions
 
-#### Extensions to Numbers
+#### Extensions to booleans
 
 ```c#
 // Converts boolean value to either "yes" or "No".
@@ -35,8 +35,8 @@ string ToYesNo(this bool source);
 // Executes an action while the given boolean value is equal to target value.
 void DoOn(this bool source, bool result, Action execute);
 
-
-
+// Converts boolean value to either "yes" or "No".
+string ToYesNo(this bool source, string pattern);
 ```
 
 #### Extensions to Numbers
@@ -265,6 +265,11 @@ byte[] ReadBytesFromDisk(this string filePath);
 // Reads the file content as array of bytes asynchronously.
 Task<byte[]> ReadBytesFromDiskAsync(this string filePath)
 
+// Reads xml content file as generic type.
+T FromXml<T>(this string path);
+
+// Generate a new guid and returns it as a string.
+static string FromGuid(this string empty);
 ```
 
 #### Extensions to DateTime
@@ -359,6 +364,22 @@ int GetAge(this DateTime date);
 
 // Gets the name of the given date time.
 string DayName(this DateTime current);
+```
+
+#### Extensions to Generics
+
+```c#
+// Converts generic type to xml content file.
+void ToXml<T>(this T entity, string path;
+
+// Converts generic type to xml content file.
+void ToXml<T>(this T entity, string path, Encoding encoding);
+
+// Converts generic type to xml content file.
+void ToXml<T>(this T entity, string path, Formatting formatting, int indentation = 4);
+
+// Converts generic type to xml content file.
+void ToXml<T>(this T entity, string path, Encoding encoding, Formatting formatting, int indentation = 4);
 ```
 
 #### Extensions to Lists

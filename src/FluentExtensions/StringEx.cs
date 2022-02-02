@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using FluentExtensions.Enumerators;
 
 namespace FluentExtensions
@@ -336,8 +337,8 @@ namespace FluentExtensions
         /// <returns>A portion of string based on given characters and position to get.</returns>
         public static string Take(this string source, int characters, Position from = Position.Start)
         {
-            var position = from == Position.Start ? 0 : source.Length;
-            var startIndex = from == Position.End ? (position - characters) : position;
+            var position = @from == Position.Start ? 0 : source.Length;
+            var startIndex = @from == Position.End ? (position - characters) : position;
             return source.Substring(startIndex, characters);
         }
 
@@ -574,6 +575,29 @@ namespace FluentExtensions
             }
 
             return outputFile;
+        }
+
+        /// <summary>
+        /// Reads xml content file as generic type.
+        /// </summary>
+        /// <param name="path">XML input file.</param>
+        public static T FromXml<T>(this string path)
+        {
+            var xml = new XmlSerializer(typeof(T));
+            using (var reader = new StreamReader(path))
+            {
+                return (T) xml.Deserialize(reader);
+            }
+        }
+
+        /// <summary>
+        /// Generate a new guid and returns it as a string.
+        /// </summary>
+        /// <param name="empty">An empty string like "", it won't be used just to extend.</param>
+        /// <returns>A newly generated guid as string.</returns>
+        public static string FromGuid(this string empty)
+        {
+            return Guid.NewGuid().ToString();
         }
     }
 }

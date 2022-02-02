@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1377f40b-bfc5-438d-beed-b2d8e47587c4" name="Default Changelist" comment="" />
+    <list default="true" id="1377f40b-bfc5-438d-beed-b2d8e47587c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FluentExtensions/GenericEx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FluentExtensions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FluentExtensions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FluentExtensions/BooleanEx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FluentExtensions/BooleanEx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FluentExtensions/StringEx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FluentExtensions/StringEx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FluentExtensions/release-notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FluentExtensions/release-notes.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,15 +48,29 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/FluentExtensions/StringEx.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FluentExtensions/BooleanEx.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Cyril/RiderProjects/FluentExtensions/src/FluentExtensions/StringEx.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Cyril/RiderProjects/FluentExtensions/src/FluentExtensions/ListEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FluentExtensions/ListEx.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2370a49ab826558e6fd7b0534184891042572a82154557cac4579449d321/File.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1xYYCHNz3G3xzSKOde2G4346u05" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -66,7 +87,28 @@
       <option name="presentableId" value="Default" />
       <updated>1630533363506</updated>
       <workItem from="1630533369094" duration="163000" />
+      <workItem from="1639964216299" duration="1013000" />
+      <workItem from="1640044068349" duration="1607000" />
+      <workItem from="1642371811141" duration="3302000" />
+      <workItem from="1642375592228" duration="4219000" />
+      <workItem from="1643060246606" duration="18313000" />
+      <workItem from="1643803022311" duration="1345000" />
     </task>
+    <task id="LOCAL-00001" summary="Added new extensions.">
+      <created>1642376094648</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642376094648</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update README.md">
+      <created>1642378570618</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642378570618</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +127,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Added new extensions." />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

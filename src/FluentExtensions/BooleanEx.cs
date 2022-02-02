@@ -15,6 +15,19 @@ namespace FluentExtensions
         }
 
         /// <summary>
+        /// Converts boolean value to either "yes" or "No".
+        /// </summary>
+        /// <param name="source">Boolean to check.</param>
+        /// <param name="pattern">Pattern for Yes or No, for example in german language: "Ja|Nein" </param>
+        /// <returns>Either "Yes" or "No" based on given boolean value.</returns>
+        /// <example>French implementation will be like<code>"Oui|Non"</code></example>
+        public static string ToYesNo(this bool source, string pattern)
+        {
+            var patternArray = pattern.Split('|');
+            return source ? patternArray[0] : patternArray[1];
+        }
+
+        /// <summary>
         /// Executes an action while the given boolean value is equal to target value.
         /// </summary>
         /// <param name="source">boolean value to check against.</param>
