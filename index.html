@@ -42,33 +42,36 @@
                     <div class="header">Extensions</div>
                     <div class="menu">
 
-                        <a class="item" href="./pages/BooleanEx.html">
-                                Boolean Extensions
-                                <div class="ui label circular">2</div>
-                            </a>
+                        <a class="item" href="./BooleanEx.html">
+                            Boolean Extensions
+                            <div class="ui label circular">3</div>
+                        </a>
 
-                        <a class="item" href="./pages/NumericEx.html">
-                                Number Extensions
-                                <div class="ui label circular">30</div>
-                            </a>
+                        <a class="item" href="./NumericEx.html">
+                            Number Extensions
+                            <div class="ui label circular">30</div>
+                        </a>
 
-                        <a class="item" href="./pages/StringEx.html">
-                                String Extensions
-                                <div class="ui label circular">42</div>
-                            </a>
+                        <a class="item" href="./StringEx.html">
+                            String Extensions
+                            <div class="ui label circular">44</div>
+                        </a>
 
-                        <a class="item" href="./pages/DateTimeEx.html">
-                                DateTime Extensions
-                                <div class="ui label circular">30</div>
+                        <a class="item" href="./DateTimeEx.html">
+                            DateTime Extensions
+                            <div class="ui label circular">30</div>
+                        </a>
 
-                            </a>
+                        <a class="item" href="./DateTimeEx.html">
+                            Generic Extensions
+                            <div class="ui label circular">4</div>
+                        </a>
 
-                        <a class="item" href="./pages/ListEx.html">
-                                List Extensions
-                                <div class="ui label circular">5</div>
+                        <a class="item" href="./ListEx.html">
+                            List Extensions
+                            <div class="ui label circular">5</div>
 
-                            </a>
-
+                        </a>
 
                     </div>
                 </div>
@@ -92,6 +95,15 @@
                     <div class="sub header">
                         <pre>
                         <code class="language-csharp animate__animated animate__fadeInLeft">
+// Converts boolean value to either "yes" or "No".
+string ToYesNo(this bool source);
+
+// Executes an action while the given boolean value is equal to target value.
+void DoOn(this bool source, bool result, Action execute);
+
+// Converts boolean value to either "yes" or "No".
+string ToYesNo(this bool source, string pattern);
+
 // Determines whether the given target is even.
 bool IsEven(this int source);
 
@@ -169,7 +181,7 @@ double ToGB(this int number, DigitalStorage from = DigitalStorage.GB);
 
 // Converts the given number to terabytes.
 double ToTB(this int number, DigitalStorage from = DigitalStorage.TB)
- 
+
 // Converts given number to kilobytes.
 double ToKB(this long number, DigitalStorage from = DigitalStorage.KB);
 
@@ -181,7 +193,97 @@ double ToGB(this long number, DigitalStorage from = DigitalStorage.GB);
 
 // Converts the given number to terabytes.
 double ToTB(this long number, DigitalStorage from = DigitalStorage.TB)
-                           
+
+// Determines whether the given target is even.
+bool IsEven(this int source);
+
+// Determines whether the given target is odd.
+bool IsOdd(this int source);
+
+// Determines whether the current number is greater than the target one.
+bool IsGreaterThan(this int source, int target);
+
+// Determines whether the current number is less than the target one.
+bool IsLessThan(this int source, int target);
+
+// Determines whether the current number is equal to the target one.
+bool IsEqualTo(this int source, int target);
+
+// Gets the date time in past from given number of days.
+DateTime DaysAgo(this int days);
+
+// Gets the date time in future from given number of days.
+DateTime DaysAfter(this int days);
+
+// Gets the date time in past from given number of weeks.
+DateTime WeeksAgo(this int weeks);
+
+// Gets the date time in future from given number of weeks.
+DateTime WeeksAfter(this int weeks);
+
+// Converts the given number into days.
+DateTime Days(this int num);
+
+// Gets the date time in future from given number of months.
+DateTime MonthsAfter(this int months);
+
+// Gets the date time in past from given number of months.
+DateTime MonthsAgo(this int months);
+
+// Gets the date time in past from given number of years.
+DateTime YearsAgo(this int years);
+
+// Gets the date time in future from given number of years.
+DateTime YearsAfter(this int years);
+
+// Determines whether the given year is a leap year.
+bool IsLeapYear(this int year);
+
+// Gets the next leap year based on the given year.
+int NextLeapYear(this int year);
+
+// Gets the previous leap year based on the given year.
+int PreviousLeapYear(this int year);
+
+// Converts byte array to base64 string.
+string FromByeArrayToBase64(this byte[] source, Base64FormattingOptions options = Base64FormattingOptions.None);
+
+// Separates every 3 number by comma.
+string SeparateThousandsByComma(this int source);
+
+// Separates every 3 number by comma.
+string SeparateThousandsByComma(this int source, CultureInfo culture);
+
+// Generating Random Numbers.
+string RandomDigits(this int length);
+
+// Generating Random Numbers.
+string GenerateRandomString(this int length, bool isUpperCase = false, bool containNumbers = false);
+
+// Converts given number to kilobytes.
+double ToKB(this int number, DigitalStorage from = DigitalStorage.KB);
+
+// Converts given number to megabytes.
+double ToMB(this int number, DigitalStorage from = DigitalStorage.MB);
+
+// Converts the given number to gigabytes.
+double ToGB(this int number, DigitalStorage from = DigitalStorage.GB);
+
+// Converts the given number to terabytes.
+double ToTB(this int number, DigitalStorage from = DigitalStorage.TB)
+
+// Converts given number to kilobytes.
+double ToKB(this long number, DigitalStorage from = DigitalStorage.KB);
+
+// Converts given number to megabytes.
+double ToMB(this long number, DigitalStorage from = DigitalStorage.MB);
+
+// Converts the given number to gigabytes.
+double ToGB(this long number, DigitalStorage from = DigitalStorage.GB);
+
+// Converts the given number to terabytes.
+double ToTB(this long number, DigitalStorage from = DigitalStorage.TB)
+
 // Determines whether the given string is Integer.
 bool IsInt(this string source);
 
@@ -207,7 +309,7 @@ string ToTitleCase(this string source);
 // Converts given text into title case text.
 string ToTitleCase(this string source, CultureInfo culture);
 
-// Converts string type (True | False) to boolean. 
+// Converts string type (True | False) to boolean.
 bool ToBoolean(this string source);
 
 // Determines whether the given string contains digit(s).
@@ -250,7 +352,7 @@ Task ToFileInDiskAsync(this string source, string path);
 string ReadFromDisk(this string path);
 
 // Gets the content of the text file asynchronously.
-Task<string> ReadFromDiskAsync(this string path);
+Task&lt;string&gt; ReadFromDiskAsync(this string path);
 
 // Adds text to end of another text.
 string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition = true);
@@ -258,51 +360,63 @@ string AddToEnd(this string text, string textToAdd, bool addSpaceBeforeAddition 
 // Adds text to start of another text.
 string AddToStart(this string text, string textToAdd, bool addSpaceAfterAddition = true);
 
-// Gets portion of string based on given characters and position to get. 
+// Gets portion of string based on given characters and position to get.
 string Take(this string source, int characters, Position from = Position.Start);
 
 // Replaces multiple values inside a string with one value.
 string ReplaceMultipleWithOne(this string source, string[] values, string value);
 
 // Gets the free space of the given drive in gigabytes.
-public static string DriveFreeSpace(this string driveLetter);
+string DriveFreeSpace(this string driveLetter);
 
 // Gets the total size of the given drive in gigabytes.
-public static string DriveTotalSize(this string driveLetter);
+string DriveTotalSize(this string driveLetter);
 
 // Gets the total size of the given drive in gigabytes.
-public static string DriveTotalSize(this string driveLetter);
+string DriveTotalSize(this string driveLetter);
 
 // Gets the format of the given drive.
-public static string DriveFormat(this string driveLetter);
+string DriveFormat(this string driveLetter);
 
 // Gets the type of the given drive.
-public static DriveType DriveType(this string driveLetter);
+DriveType DriveType(this string driveLetter);
 
 // Delete the given file from disk.
-public static void DeleteFile(this string filePath);
+void DeleteFile(this string filePath);
 
 // Hides the given file from disk.
-public static void HideFile(this string filePath);
+void HideFile(this string filePath);
 
-// Shows the given file from disk (if it's already hidden).
-public static void ShowFile(this string filePath);
+// Shows the given file from the disk (if it's already hidden).
+void ShowFile(this string filePath);
 
-// Gets the date and time when this given file created.
-public static DateTime CreatedDate(this string filePath);
+// Gets the date and time when this given file was created.
+DateTime CreatedDate(this string filePath);
 
-// Copies the file to the given destination (overwrites it if it's already exist).
-public static void CopyFile(this string filePath, string destination);
+// Copies the file to the given destination (overwrites it if it already exists).
+void CopyFile(this string filePath, string destination);
 
-// Moves the file to the given destination (overwrites it if it's already exist).
-public static void MoveFile(this string filePath, string destination);
+// Moves the file to the given destination (overwrites it if it already exists).
+void MoveFile(this string filePath, string destination);
 
 // Gets the file size in kilobytes.
-public static double FileSizeInKB(this string filePath);
+double FileSizeInKB(this string filePath);
 
 // Gets the file size in megabytes.
-public static double FileSizeInMB(this string filePath);
+double FileSizeInMB(this string filePath);
 
+// Reads the file content as array of bytes.
+byte[] ReadBytesFromDisk(this string filePath);
+
+// Reads the file content as array of bytes asynchronously.
+Task&lt;byte[]&gt; ReadBytesFromDiskAsync(this string filePath)
+
+// Reads xml content file as generic type.
+T FromXml&lt;T&gt;(this string path);
+
+// Generate a new guid and returns it as a string.
+static string FromGuid(this string empty);
+                                
 // Gets the day after given date.
 DateTime Tomorrow(this DateTime current);
 
@@ -392,18 +506,33 @@ int GetAge(this DateTime date);
 
 // Gets the name of the given date time.
 string DayName(this DateTime current);
+                                
+// Converts generic type to xml content file.
+void ToXml&lt;T&gt;(this T entity, string path;
 
+// Converts generic type to xml content file.
+void ToXml&lt;T&gt;(this T entity, string path, Encoding encoding);
+
+// Converts generic type to xml content file.
+void ToXml&lt;T&gt;(this T entity, string path, Formatting formatting, int indentation = 4);
+
+// Converts generic type to xml content file.
+void ToXml&lt;T&gt;(this T entity, string path, Encoding encoding, Formatting formatting, int indentation = 4);
+                                                
 // Changes a list from mutable (Changeable) to immutable(Not changeable).
-IEnumerable<T> ToImmutableList<T>(this IEnumerable<T> sourceList);
+IEnumerable&lt;T&gt; ToImmutableList&lt;T&gt;(this IEnumerable&lt;T&gt; sourceList);
 
 // Replaces a list items with another ones items.
-static IEnumerable<T> ReplaceWith<T>(this IList<T> sourceList, IEnumerable<T> targetList);
+static IEnumerable&lt;T&gt; ReplaceWith&lt;T&gt;(this IList&lt;T&gt; sourceList, IEnumerable&lt;T&gt; targetList);
 
 // Picks one item through the list randomly.
-T PickRandomItem<T>(this IList<T> sourceList);
+T PickRandomItem&lt;T&gt;(this IList&lt;T&gt; sourceList);
 
+// Joins string array into a single string separated via delimiter.
+string Join(this IEnumerable&lt;string&gt; texts, string delimiter);
 
-                            
+// Converts IEnumerable to list, if it is already a List it returns the list itself.
+IList&lt;T&gt; AsList&lt;T&gt;(IEnumerable&lt;T&gt; sourceList);                                                
                         </code>
                         </pre>
                     </div>

@@ -43,7 +43,7 @@
 
                         <a class="item" href="./BooleanEx.html">
                                 Boolean Extensions
-                                <div class="ui label circular">2</div>
+                                <div class="ui label circular">3</div>
                             </a>
 
                         <a class="item" href="./NumericEx.html">
@@ -53,14 +53,18 @@
 
                         <a class="item" href="./StringEx.html">
                                 String Extensions
-                                <div class="ui label circular">42</div>
+                                <div class="ui label circular">44</div>
                             </a>
 
                         <a class="item" href="./DateTimeEx.html">
                                 DateTime Extensions
                                 <div class="ui label circular">30</div>
-
                             </a>
+
+                        <a class="item" href="./DateTimeEx.html">
+                            Generic Extensions
+                            <div class="ui label circular">4</div>
+                        </a>
 
                         <a class="item" href="./ListEx.html">
                                 List Extensions
@@ -99,6 +103,18 @@ string resultInString = result.ToYesNo(); </code>
                     </pre>
                     </h4>
 
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToYesNo</p>
+                        <p class="title-description">Converts boolean value to either "yes" or "No".
+                        </p>
+                        <pre>
+                        <code class="language-csharp">string ToYesNo(this bool source, string pattern);</code><span class="example">Example:</span>
+                        <code class="language-csharp">bool result = true;   
+string resultInString = result.ToYesNo("Ja|Nein"); </code>
+                    </pre>
+                    </h4>
+
                     <h4 class="ui dividing header
                             animate__animated
                             animate__fadeInUp">
@@ -114,6 +130,7 @@ operationResult.DoOn(true, ()=>{
 </code>
                     </pre>
                     </h4>
+                    
                 </div>
             </div>
         </div>

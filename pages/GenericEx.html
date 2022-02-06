@@ -93,71 +93,52 @@
 
                     <h4 class="ui dividing header animate__animated
                             animate__fadeInUp">
-                        <p class="extension-title">ToImmutableList</p>
-                        <p class="title-description">Changes a list from mutable (Changeable) to immutable(Not changeable).
+                        <p class="extension-title">ToXml</p>
+                        <p class="title-description">Converts generic type to xml content file.
                         </p>
                         <pre>
-                        <code class="language-csharp">IEnumerable&lt;T&gt; ToImmutableList&lt;T&gt;(this IEnumerable&lt;T&gt; sourceList);</code><span class="example">Example:</span>
-                        <code class="language-csharp">IList&lt;int&gt; list1 = new List&lt;int&gt;{2, 4, 6, 8};   
-IList&lt;int&gt; immutableList = list1.ToImmutableList(); </code>
+                        <code class="language-csharp">void ToXml&lt;T&gt;(this T entity, string path);</code><span class="example">Example:</span>
+                        <code class="language-csharp">Person person = new Person{ Firstname = "Alan" };   
+person.ToXml("c:\person.xml"); </code>
                     </pre>
                     </h4>
 
-                    <h4 class="ui dividing header
-                                                    animate__animated
-                                                    animate__fadeInUp">
-                        <p class="extension-title">ReplaceWith</p>
-                        <p class="title-description">Replaces a list items with another ones items.</p>
-                        <pre>
-                        <code class="language-csharp">IEnumerable&lt;T&gt; ReplaceWith&lt;T&gt;(this IList&lt;T&gt; sourceList, IEnumerable&lt;T&gt; targetList);</code><span class="example">Example:</span>
-                        <code class="language-csharp">IList&lt;int&gt; list1 = new List&lt;int&gt;{2, 4, 6, 8};   
-IList&lt;int&gt; list2 = new List&lt;int&gt;(); 
-list2.ReplaceWith(list1);
-</code>
-                    </pre>
-                    </h4>
-                    <h4 class="ui
-                                                                                    dividing
-                                                                                    header
-                                                                                    animate__animated
-                                                                                    animate__fadeInUp">
-                        <p class="extension-title">PickRandomItem</p>
-                        <p class="title-description">Picks one item through the list randomly..
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToXml</p>
+                        <p class="title-description">Converts generic type to xml content file.
                         </p>
                         <pre>
-                        <code class="language-csharp">T PickRandomItem&lt;T&gt;(this IList&lt;T&gt; sourceList);</code><span class="example">Example:</span>
-                        <code class="language-csharp">IList&lt;int&gt; list1 = new List&lt;int&gt;{2, 4, 6, 8};   
-int randomItem = list1.PickRandomItem(); </code>
+                        <code class="language-csharp">void ToXml&lt;T&gt;(this T entity, string path, Encoding encoding);</code><span class="example">Example:</span>
+                        <code class="language-csharp">Person person = new Person{ Firstname = "Alan" };   
+person.ToXml("c:\person.xml", Encoding.UTF8); </code>
                     </pre>
                     </h4>
-                    <h4 class="ui
-                                                                                                    dividing
-                                                                                                    header
-                                                                                                    animate__animated
-                                                                                                    animate__fadeInUp">
-                        <p class="extension-title">Join</p>
-                        <p class="title-description">Joins string array into a single string separated via delimiter.
+                    
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToXml</p>
+                        <p class="title-description">Converts generic type to xml content file.
                         </p>
                         <pre>
-                        <code class="language-csharp">string Join(this IEnumerable&lt;string&gt; texts, string delimiter);</code><span class="example">Example:</span>
-                        <code class="language-csharp">string[] texts = new string[]{"one", "two", "three"};   
-string result = texts.Join(","); // "one,two,three"</code>
+                        <code class="language-csharp">void ToXml&lt;T&gt;(this T entity, string path, Formatting formatting, int indentation = 4);</code><span class="example">Example:</span>
+                        <code class="language-csharp">Person person = new Person{ Firstname = "Alan" };   
+person.ToXml("c:\person.xml", Formatting.Indented, 2); </code>
                     </pre>
                     </h4>
-                    <h4 class="ui
-                                                                                                        dividing
-                                                                                                        header
-                                                                                                        animate__animated
-                                                                                                        animate__fadeInUp">
-                        <p class="extension-title">AsList</p>
-                        <p class="title-description">Converts IEnumerable to list, if it is already a List it returns the list itself.
+                    
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToXml</p>
+                        <p class="title-description">Converts generic type to xml content file.
                         </p>
                         <pre>
-                        <code class="language-csharp">IList&lt;T&gt; AsList&lt;T&gt;(IEnumerable&lt;T&gt; sourceList);</code><span class="example">Example:</span>
-                        <code class="language-csharp">IEnumerable&lt;T&gt; collection = ...;   
-IList&lt;T&gt; result = collection.AsList(); // "one,two,three"</code>
+                        <code class="language-csharp">void ToXml&lt;T&gt;(this T entity, string path, Encoding encoding, Formatting formatting, int indentation = 4);</code><span class="example">Example:</span>
+                        <code class="language-csharp">Person person = new Person{ Firstname = "Alan" };   
+person.ToXml("c:\person.xml", Encoding.UTF8, Formatting.Indented, 2); </code>
                     </pre>
                     </h4>
+                    
                 </div>
             </div>
         </div>
