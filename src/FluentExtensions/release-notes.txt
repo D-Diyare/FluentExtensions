@@ -1,3 +1,10 @@
+v.1.6.0
+  New Extensions Added:
+  - void ToCSV<T>(this T entity, string path, bool append = false);
+  - Task ToCSVAsync<T>(this T entity, string path, bool append = false);
+  - void ToCSV<T>(IEnumerable<T> entities, string path, bool append = false);
+  - Task ToCSVAsync<T>(IEnumerable<T> entities, string path, bool append = false);
+
 v.1.5.0
   New Extensions Added:
   - void ToXml<T>(this T entity, string path);
@@ -7,7 +14,7 @@ v.1.5.0
   - T FromXml<T>(this string path);
   - string FromGuid(this string empty);
   - string ToYesNo(this bool source, string pattern);
- 
+  
 v.1.4.0
   New Extensions Added:
   - string Join(this IEnumerable<string> texts, string delimiter);

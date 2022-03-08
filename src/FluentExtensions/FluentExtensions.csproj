@@ -10,8 +10,8 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>extension, datetime, date, dotnet, extension-methods, fluent, string-matching, stringextensions, fluentextension, fluentextensions, numericxtensions</PackageTags>
         <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
-        <PackageProjectUrl>https://github.com/D-Diyare/FluentExtensions</PackageProjectUrl>
-        <Version>1.5</Version>
+        <PackageProjectUrl>https://d-diyare.github.io/FluentExtensions/</PackageProjectUrl>
+        <Version>1.6</Version>
         <Copyright>Copyright © Diyare Abdulla 2021</Copyright>
         <Title>FluentExtensions</Title>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

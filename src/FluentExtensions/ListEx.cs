@@ -94,5 +94,65 @@ namespace FluentExtensions
             return sourceList is List<T> ? sourceList : sourceList.ToList();
         }
 
+        /// <summary>
+        /// Converts Generic type into CSV file.
+        /// </summary>
+        /// <param name="entity">Entity to convert.</param>
+        /// <param name="path">CSV output path.</param>
+        public static void ToCSV<T>(IEnumerable<T> entities, string path, bool append = false)
+        {
+            var text = new StringBuilder();
+
+            foreach (var entity in entities)
+            {
+                var props = entity?.GetType().GetProperties();
+                var length = props?.Length;
+    
+                for (var i = 0; i < length; i++)
+                {
+                    var val = props?[i].GetValue(entity)?.ToString();
+                    var delimiter = i == length - 1 ? "" : ",";
+                    text.Append($"{val}{delimiter}");
+                }
+
+                text.AppendLine();
+            }
+
+            using (var write = new StreamWriter(path, append))
+            {
+                write.Write(text.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Converts Generic type into CSV file asynchrnously.
+        /// </summary>
+        /// <param name="entity">Entity to convert.</param>
+        /// <param name="path">CSV output path.</param>
+        public static async Task ToCSVAsync<T>(IEnumerable<T> entities, string path, bool append = false)
+        {
+            var text = new StringBuilder();
+
+            foreach (var entity in entities)
+            {
+                var props = entity?.GetType().GetProperties();
+                var length = props?.Length;
+    
+                for (var i = 0; i < length; i++)
+                {
+                    var val = props?[i].GetValue(entity)?.ToString();
+                    var delimiter = i == length - 1 ? "" : ",";
+                    text.Append($"{val}{delimiter}");
+                }
+
+                text.AppendLine();
+            }
+
+            using (var writer = new StreamWriter(path, append))
+            {
+                await writer.WriteAsync(text.ToString());
+            }
+        }
+
     }
 }

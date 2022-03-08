@@ -380,6 +380,13 @@ void ToXml<T>(this T entity, string path, Formatting formatting, int indentation
 
 // Converts generic type to xml content file.
 void ToXml<T>(this T entity, string path, Encoding encoding, Formatting formatting, int indentation = 4);
+
+// Converts Generic type into CSV file.
+void ToCSV<T>(this T entity, string path, bool append = false);
+
+// Converts Generic type into CSV file asynchronously
+Task ToCSVAsync<T>(this T entity, string path, bool append = false);
+
 ```
 
 #### Extensions to Lists
@@ -399,4 +406,10 @@ string Join(this IEnumerable<string> texts, string delimiter);
 
 // Converts IEnumerable to list, if it is already a List it returns the list itself.
 IList<T> AsList<T>(IEnumerable<T> sourceList);
+
+// Converts Generic list type into CSV file.
+void ToCSV<T>(IEnumerable<T> entities, string path, bool append = false);
+
+// Converts Generic list type into CSV file asynchrnously.
+Task ToCSVAsync<T>(IEnumerable<T> entities, string path, bool append = false);
 ```

@@ -120,5 +120,6 @@ namespace FluentExtensions
                 await write.WriteAsync(text.ToString());
             }
         }
+
     }
 }
