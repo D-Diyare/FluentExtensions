@@ -17,7 +17,6 @@ To install FluentExtensions, run the following command in the Package Manager Co
 
 ```
 PM> Install-Package FluentExtensions.NET
-
 ```
 
 ### Documentations
