@@ -42,35 +42,35 @@
                     <div class="menu">
 
                         <a class="item" href="./BooleanEx.html">
-                            Boolean Extensions
-                            <div class="ui label circular">3</div>
-                        </a>
+                                Boolean Extensions
+                                <div class="ui label circular">3</div>
+                            </a>
 
                         <a class="item" href="./NumericEx.html">
-                            Number Extensions
-                            <div class="ui label circular">30</div>
-                        </a>
+                                Number Extensions
+                                <div class="ui label circular">30</div>
+                            </a>
 
                         <a class="item" href="./StringEx.html">
-                            String Extensions
-                            <div class="ui label circular">44</div>
-                        </a>
+                                String Extensions
+                                <div class="ui label circular">44</div>
+                            </a>
 
                         <a class="item" href="./DateTimeEx.html">
-                            DateTime Extensions
-                            <div class="ui label circular">30</div>
-                        </a>
+                                DateTime Extensions
+                                <div class="ui label circular">30</div>
+                            </a>
 
-                        <a class="item" href="./DateTimeEx.html">
-                            Generic Extensions
-                            <div class="ui label circular">4</div>
-                        </a>
+                        <a class="item" href="./GenericEx.html">
+                                Generic Extensions
+                                <div class="ui label circular">6</div>
+                            </a>
 
                         <a class="item" href="./ListEx.html">
-                            List Extensions
-                            <div class="ui label circular">5</div>
+                                List Extensions
+                                <div class="ui label circular">7</div>
 
-                        </a>
+                            </a>
 
                     </div>
                 </div>
@@ -104,8 +104,8 @@ IList&lt;int&gt; immutableList = list1.ToImmutableList(); </code>
                     </h4>
 
                     <h4 class="ui dividing header
-                                                    animate__animated
-                                                    animate__fadeInUp">
+                            animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">ReplaceWith</p>
                         <p class="title-description">Replaces a list items with another ones items.</p>
                         <pre>
@@ -117,10 +117,10 @@ list2.ReplaceWith(list1);
                     </pre>
                     </h4>
                     <h4 class="ui
-                                                                                    dividing
-                                                                                    header
-                                                                                    animate__animated
-                                                                                    animate__fadeInUp">
+                            dividing
+                            header
+                            animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">PickRandomItem</p>
                         <p class="title-description">Picks one item through the list randomly..
                         </p>
@@ -131,10 +131,10 @@ int randomItem = list1.PickRandomItem(); </code>
                     </pre>
                     </h4>
                     <h4 class="ui
-                                                                                                    dividing
-                                                                                                    header
-                                                                                                    animate__animated
-                                                                                                    animate__fadeInUp">
+                            dividing
+                            header
+                            animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">Join</p>
                         <p class="title-description">Joins string array into a single string separated via delimiter.
                         </p>
@@ -145,10 +145,10 @@ string result = texts.Join(","); // "one,two,three"</code>
                     </pre>
                     </h4>
                     <h4 class="ui
-                                                                                                        dividing
-                                                                                                        header
-                                                                                                        animate__animated
-                                                                                                        animate__fadeInUp">
+                            dividing
+                            header
+                            animate__animated
+                            animate__fadeInUp">
                         <p class="extension-title">AsList</p>
                         <p class="title-description">Converts IEnumerable to list, if it is already a List it returns the list itself.
                         </p>
@@ -158,6 +158,33 @@ string result = texts.Join(","); // "one,two,three"</code>
 IList&lt;T&gt; result = collection.AsList(); // "one,two,three"</code>
                     </pre>
                     </h4>
+
+
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToCSV</p>
+                        <p class="title-description">Converts Generic list type into CSV file.
+                        </p>
+                        <pre>
+                        <code class="language-csharp">void ToCSV&lt;T&gt;(IEnumerable&lt;T&gt; entities, string path, bool append = false);</code><span class="example">Example:</span>
+                        <code class="language-csharp">IEnumerable&lt;T&gt; collection = ...;   
+collection.ToCSV("c:\collections.csv"); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToCSVAsync</p>
+                        <p class="title-description">Converts Generic list type into CSV file asynchronously
+                        </p>
+                        <pre>
+                        <code class="language-csharp">void ToCSVAsync&lt;T&gt;(IEnumerable&lt;T&gt; entities, string path, bool append = false);</code><span class="example">Example:</span>
+                        <code class="language-csharp">IEnumerable&lt;T&gt; collection = ...;     
+collection.ToCSVAsync("c:\collections.csv"); </code>
+                    </pre>
+                    </h4>
+
+
                 </div>
             </div>
         </div>

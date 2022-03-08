@@ -62,14 +62,14 @@
                                 <div class="ui label circular">30</div>
                             </a>
 
-                        <a class="item" href="./pages/DateTimeEx.html">
+                        <a class="item" href="./pages/GenericEx.html">
                                 Generic Extensions
-                                <div class="ui label circular">4</div>
+                                <div class="ui label circular">6</div>
                             </a>
 
                         <a class="item" href="./pages/ListEx.html">
                                 List Extensions
-                                <div class="ui label circular">5</div>
+                                <div class="ui label circular">7</div>
 
                             </a>
 
@@ -518,9 +518,21 @@ void ToXml&lt;T&gt;(this T entity, string path, Formatting formatting, int inden
 
 // Converts generic type to xml content file.
 void ToXml&lt;T&gt;(this T entity, string path, Encoding encoding, Formatting formatting, int indentation = 4);
-                                                
+
+// Converts Generic type into CSV file.
+void ToCSV&lt;T&gt;(this T entity, string path, bool append = false);
+
+// Converts Generic type into CSV file asynchronously
+Task ToCSVAsync&lt;T&gt;(this T entity, string path, bool append = false);     
+
 // Changes a list from mutable (Changeable) to immutable(Not changeable).
 IEnumerable&lt;T&gt; ToImmutableList&lt;T&gt;(this IEnumerable&lt;T&gt; sourceList);
+
+// Converts Generic type into CSV file.
+void ToCSV&lt;T&gt;(this T entity, string path, bool append = false);
+
+// Converts Generic type into CSV file asynchronously
+Task ToCSVAsync&lt;T&gt;(this T entity, string path, bool append = false);
 
 // Replaces a list items with another ones items.
 static IEnumerable&lt;T&gt; ReplaceWith&lt;T&gt;(this IList&lt;T&gt; sourceList, IEnumerable&lt;T&gt; targetList);
@@ -532,7 +544,13 @@ T PickRandomItem&lt;T&gt;(this IList&lt;T&gt; sourceList);
 string Join(this IEnumerable&lt;string&gt; texts, string delimiter);
 
 // Converts IEnumerable to list, if it is already a List it returns the list itself.
-IList&lt;T&gt; AsList&lt;T&gt;(IEnumerable&lt;T&gt; sourceList);                                                
+IList&lt;T&gt; AsList&lt;T&gt;(IEnumerable&lt;T&gt; sourceList);       
+
+// Converts Generic list type into CSV file.
+void ToCSV&lt;T&gt;(IEnumerable&lt;T&gt; entities, string path, bool append = false);
+
+// Converts Generic list type into CSV file asynchronously.
+Task ToCSVAsync&lt;T&gt;(IEnumerable&lt;T&gt; entities, string path, bool append = false);
                         </code>
                         </pre>
                     </div>

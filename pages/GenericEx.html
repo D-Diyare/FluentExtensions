@@ -42,35 +42,35 @@
                     <div class="menu">
 
                         <a class="item" href="./BooleanEx.html">
-                            Boolean Extensions
-                            <div class="ui label circular">3</div>
-                        </a>
+                                Boolean Extensions
+                                <div class="ui label circular">3</div>
+                            </a>
 
                         <a class="item" href="./NumericEx.html">
-                            Number Extensions
-                            <div class="ui label circular">30</div>
-                        </a>
+                                Number Extensions
+                                <div class="ui label circular">30</div>
+                            </a>
 
                         <a class="item" href="./StringEx.html">
-                            String Extensions
-                            <div class="ui label circular">44</div>
-                        </a>
+                                String Extensions
+                                <div class="ui label circular">44</div>
+                            </a>
 
                         <a class="item" href="./DateTimeEx.html">
-                            DateTime Extensions
-                            <div class="ui label circular">30</div>
-                        </a>
+                                DateTime Extensions
+                                <div class="ui label circular">30</div>
+                            </a>
 
-                        <a class="item" href="./DateTimeEx.html">
-                            Generic Extensions
-                            <div class="ui label circular">4</div>
-                        </a>
+                        <a class="item" href="./GenericEx.html">
+                                Generic Extensions
+                                <div class="ui label circular">6</div>
+                            </a>
 
                         <a class="item" href="./ListEx.html">
-                            List Extensions
-                            <div class="ui label circular">5</div>
+                                List Extensions
+                                <div class="ui label circular">7</div>
 
-                        </a>
+                            </a>
 
                     </div>
                 </div>
@@ -114,7 +114,7 @@ person.ToXml("c:\person.xml"); </code>
 person.ToXml("c:\person.xml", Encoding.UTF8); </code>
                     </pre>
                     </h4>
-                    
+
                     <h4 class="ui dividing header animate__animated
                             animate__fadeInUp">
                         <p class="extension-title">ToXml</p>
@@ -126,7 +126,7 @@ person.ToXml("c:\person.xml", Encoding.UTF8); </code>
 person.ToXml("c:\person.xml", Formatting.Indented, 2); </code>
                     </pre>
                     </h4>
-                    
+
                     <h4 class="ui dividing header animate__animated
                             animate__fadeInUp">
                         <p class="extension-title">ToXml</p>
@@ -138,7 +138,31 @@ person.ToXml("c:\person.xml", Formatting.Indented, 2); </code>
 person.ToXml("c:\person.xml", Encoding.UTF8, Formatting.Indented, 2); </code>
                     </pre>
                     </h4>
-                    
+
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToCSV</p>
+                        <p class="title-description">Converts Generic type into CSV file.
+                        </p>
+                        <pre>
+                        <code class="language-csharp">void ToCSV&lt;T&gt;(this T entity, string path, bool append = false);</code><span class="example">Example:</span>
+                        <code class="language-csharp">Person person = new Person{ Firstname = "Alan" };   
+person.ToCSV("c:\person.csv"); </code>
+                    </pre>
+                    </h4>
+
+                    <h4 class="ui dividing header animate__animated
+                            animate__fadeInUp">
+                        <p class="extension-title">ToCSVAsync</p>
+                        <p class="title-description">Converts Generic type into CSV file asynchronously
+                        </p>
+                        <pre>
+                        <code class="language-csharp">void ToCSVAsync&lt;T&gt;(this T entity, string path, bool append = false);</code><span class="example">Example:</span>
+                        <code class="language-csharp">Person person = new Person{ Firstname = "Alan" };   
+person.ToCSVAsync("c:\person.csv"); </code>
+                    </pre>
+                    </h4>
+
                 </div>
             </div>
         </div>
